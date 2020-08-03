@@ -111,7 +111,7 @@ def _build_U(i, j, k, d, lam, F, C, x):
 
 class HawkesCumulantLearner(FitterSGD):
 
-    def __init__(self, integration_support, gamma, cs_ratio=None):
+    def __init__(self, integration_support, gamma=0.0, cs_ratio=None):
         super().__init__()
         self._cumulants_ready = False
         self.integration_support = integration_support
@@ -199,7 +199,7 @@ class HawkesCumulantLearner(FitterSGD):
         self.nphc = nphc
         self.L_vec = torch.tensor(nphc.mean_intensity)
         self.C = torch.tensor(nphc.covariance)
-        self.F = torch.tensor(np.linalg.cholesky(nphc.covariance))
+        self.F = torch.tensor(scipy.linalg.sqrtm(nphc.covariance))
         self.Kc = torch.tensor(nphc.skewness.T)
         if self.cs_ratio is None:
             self.cs_ratio = self._estimate_cs_ratio()
@@ -246,14 +246,6 @@ class HawkesCumulantLearner(FitterSGD):
         return ((1 - self.cs_ratio) * torch.mean((Kc_part - self.Kc) ** 2)
                 + self.cs_ratio * torch.mean((C_part - self.C) ** 2))
                 # + self.cs_ratio * torch.mean((C_part - self.F.mm(self.F.T)) ** 2))
-
-    def obj_R_fullD(self, R):
-        L = torch.diag(self.L_vec)
-        C = self.C
-
-        C_part = R.mm(L).mm(R.T)
-
-
 
     def objective_X(self, X):
         L_inv_sqrt = torch.diag(1 / torch.sqrt(self.L_vec))
