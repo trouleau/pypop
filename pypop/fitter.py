@@ -98,9 +98,9 @@ class FitterSGD(Fitter):
         self.optimizer.step()
         self.scheduler.step()
         self.loss = self._loss.detach()
-        # # Project to positive
-        # with torch.no_grad():
-        #     self.coeffs[self.coeffs < 1e-10] = 1e-10
+        if self.positive_constraint:  # Project to positive
+            with torch.no_grad():
+                self.coeffs[self.coeffs < 1e-20] = 1e-20
 
     @property
     def strength_ridge(self):
@@ -130,7 +130,7 @@ class FitterSGD(Fitter):
 
     def fit(self, *, objective_func, x0, optimizer, lr, lr_sched, tol, max_iter,
             penalty_name='none', elastic_net_ratio=0.95, penalty_C=1e3, seed=None,
-            callback=None):
+            positive_constraint=False, callback=None):
         """
         Fit the model.
 
@@ -158,6 +158,9 @@ class FitterSGD(Fitter):
             Inverse weight of penalty
         seed : int
             Random seed (for both `numpy` and `torch`)
+        positive_constraint : bool
+            Indicate whether to project the gradient steps onto the positive
+            plane.
         callback : callable
             Callback function that takes as input `self`
 
@@ -200,6 +203,8 @@ class FitterSGD(Fitter):
             self.penalty_C = np.inf
             self.penaly_l1 = lambda x,y: 0
             self.penalty_l1_target = None
+        # Set positive constraint attribute (used in `_take_gradient_step`)
+        self.positive_constraint = positive_constraint
         # Reset optimizer & scheduler
         self.optimizer = optimizer([self.coeffs], lr=lr)
         self.scheduler = torch.optim.lr_scheduler.ExponentialLR(self.optimizer,
