@@ -115,6 +115,7 @@ class HawkesCumulantLearner(FitterSGD):
         super().__init__()
         self._cumulants_ready = False
         self.integration_support = integration_support
+        assert isinstance(integration_support, float) and (integration_support > 0)
         self.cs_ratio = cs_ratio
         self.gamma = gamma
         self.device = 'cuda' if torch.cuda.is_available() and device == 'cuda' else 'cpu'
@@ -137,12 +138,14 @@ class HawkesCumulantLearner(FitterSGD):
         if not C.shape == (self.dim, self.dim):
             raise ValueError(f"Invalid shape for `C`")
         self.C = torch.tensor(C)
-        self.F = torch.tensor(np.linalg.cholesky(self.C))
+        self.F = torch.tensor(scipy.linalg.sqrtm(self.C))
         assert np.allclose(self.F @ self.F.T, self.C)
         if not Kc.shape == (self.dim, self.dim):
             raise ValueError(f"Invalid shape for `Kc`")
         self.Kc = torch.tensor(Kc)
-
+        if self.cs_ratio is None:
+            self.cs_ratio = self._estimate_cs_ratio()
+        self._cumulants_ready = True
 
     def _estimate_cs_ratio(self):
         norm_skewness = torch.sum(self.Kc ** 2)
@@ -183,7 +186,7 @@ class HawkesCumulantLearner(FitterSGD):
         self.L_vec = torch.tensor(mean_intensity)
         # Covariance matrix
         self.C = torch.tensor(covariance)
-        # Cholesky decompostion of C, s.t. C = F * F.T
+        # Square-root of matrix C, s.t. C = F * F.T
         self.F = torch.tensor(scipy.linalg.sqrtm(covariance))
         # Skewness matrix
         self.Kc = torch.tensor(skewness)
@@ -206,35 +209,9 @@ class HawkesCumulantLearner(FitterSGD):
         self._cumulants_ready = True
 
     def _compute_initial_guess(self):
+        raise DeprecationWarning("This initialization should not be used!")
         L_inv_sqrt = torch.diag(1 / torch.sqrt(self.L_vec))
         return self.F @ torch.eye(self.dim, dtype=torch.double) @ L_inv_sqrt
-
-    def objective_X2(self, X):
-        X_vec = X.T.flatten().reshape(1, self.dim**2)
-
-        # Skewness part
-        #print('Kc:')
-        val_skew = 0.0
-        if self.gamma < 1.0:
-            for i in range(self.dim):
-                for j in range(self.dim):
-                    U = _build_U(i, i, j, d=self.dim, lam=self.L_vec, F=self.F,
-                                C=self.C, x=X)
-                    x_Uij_x = (X_vec.mm(U).mm(X_vec.T) - self.Kc[i, j]) ** 2
-                    #print(i, j, '-->', x_Uij_x)
-                    val_skew += x_Uij_x
-
-        # Orthogonality part
-        val_orth = 0.0
-        if self.gamma > 0.0:
-            cons_mat_1 = torch.mean((X.T.mm(X) - torch.eye(self.dim))**2)
-            cons_mat_2 = torch.mean((X.mm(X.T) - torch.eye(self.dim))**2)
-            val_orth += cons_mat_1
-            val_orth += cons_mat_2
-
-        val = (1 - self.gamma) * val_skew + self.gamma * val_orth
-
-        return val.squeeze()
 
     def objective_R(self, R):
         L = torch.diag(self.L_vec)
@@ -247,24 +224,12 @@ class HawkesCumulantLearner(FitterSGD):
                 + self.cs_ratio * torch.mean((C_part - self.C) ** 2))
                 # + self.cs_ratio * torch.mean((C_part - self.F.mm(self.F.T)) ** 2))
 
-    def objective_X(self, X):
-        L_inv_sqrt = torch.diag(1 / torch.sqrt(self.L_vec))
-        R = self.F @ X @ L_inv_sqrt
-        obj_R = self.objective_R(R)
-
-        cons_mat_1 = X.T @ X - torch.eye(self.dim)
-        cons_mat_2 = X @ X.T - torch.eye(self.dim)
-        cons = torch.mean(cons_mat_1 ** 2) + torch.mean(cons_mat_2 ** 2)
-
-        return (1 - self.gamma) * obj_R + self.gamma * cons
-
-    def fit_X2(self, *args, **kwargs):
-        return super().fit(objective_func=self.objective_X2, *args, **kwargs)
-
     def fit_R(self, x0=None, *args, **kwargs):
         if x0 is None:
             x0 = self._compute_initial_guess()
         return super().fit(objective_func=self.objective_R, x0=x0, *args, **kwargs)
 
-    def fit_X(self, *args, **kwargs):
-        return super().fit(objective_func=self.objective_X, *args, **kwargs)
+    def fit(self, x0=None, *args, **kwargs):
+        if x0 is None:
+            x0 = self._compute_initial_guess()
+        return super().fit(objective_func=self.objective_R, x0=x0, *args, **kwargs)
