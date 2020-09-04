@@ -88,6 +88,7 @@ class FitterSGD(Fitter):
     def __init__(self):
         self._n_iter_done = 0
         self.coeffs = None
+        # self.loss = torch.tensor(np.inf)
         self.loss = np.inf
 
     def _take_gradient_step(self):
@@ -177,7 +178,7 @@ class FitterSGD(Fitter):
         self.coeffs = x0.clone().detach().to(self.device).requires_grad_(True)
         # Set callable if None, and call it
         if callback is None:
-            def callback(arg): pass
+            def callback(*arg, **kwargs): pass
         callback(self)
         # Set alias for objective function
         self._objective_func = objective_func
