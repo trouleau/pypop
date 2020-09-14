@@ -1,3 +1,5 @@
+from multiprocessing import Pool
+from functools import partial
 import numpy as np
 import numpy.linalg as al
 from numpy.linalg import inv
@@ -208,10 +210,13 @@ class HawkesCumulantLearner(FitterSGD):
             self.cs_ratio = self._estimate_cs_ratio()
         self._cumulants_ready = True
 
-    def _compute_initial_guess(self):
-        raise DeprecationWarning("This initialization should not be used!")
-        L_inv_sqrt = torch.diag(1 / torch.sqrt(self.L_vec))
-        return self.F @ torch.eye(self.dim, dtype=torch.double) @ L_inv_sqrt
+    def _compute_initial_guess(self, seed):
+        # Sample random orthogonal matrix
+        X_start = torch.tensor(scipy.stats.ortho_group.rvs(dim=self.dim,
+                                                           random_state=seed))
+        # Use decomposition of R
+        R_start = self.F @ X_start @ torch.diag(1 / self.L_vec.sqrt())
+        return R_start.detach()
 
     def objective_R(self, R):
         L = torch.diag(self.L_vec)
@@ -224,12 +229,46 @@ class HawkesCumulantLearner(FitterSGD):
                 + self.cs_ratio * torch.mean((C_part - self.C) ** 2))
                 # + self.cs_ratio * torch.mean((C_part - self.F.mm(self.F.T)) ** 2))
 
-    def fit_R(self, x0=None, *args, **kwargs):
-        if x0 is None:
-            x0 = self._compute_initial_guess()
-        return super().fit(objective_func=self.objective_R, x0=x0, *args, **kwargs)
+    @staticmethod
+    def worker_fit(self, i, x0, kwargs):
+        conv = super(HawkesCumulantLearner, self).fit(objective_func=self.objective_R, x0=x0, **kwargs)
+        return self.loss.item(), self.coeffs.detach(), self._n_iter_done
 
-    def fit(self, x0=None, *args, **kwargs):
-        if x0 is None:
-            x0 = self._compute_initial_guess()
-        return super().fit(objective_func=self.objective_R, x0=x0, *args, **kwargs)
+    def fit_R(self, x0=None, seed=None, num_starts=1, num_workers=1, **kwargs):
+
+        if num_workers > 1:
+            raise NotImplementedError('Parameter `num_workers` must be equal to 1')
+
+        rand = np.random.RandomState(seed)
+        if (x0 is not None) and (num_starts > 1):
+            raise RuntimeError('Several starts with fixed `x0` is not useful')
+
+        # Define pool arguments
+        pool_args = list()
+        for i in range(num_starts):
+            x0 = self._compute_initial_guess(seed=rand.randint(2**31 - 1))
+            pool_args.append((self, i, x0, kwargs))
+
+        # Run optimization
+        if num_workers > 1:
+            pool = Pool(num_workers)
+            res_obj = pool.starmap_async(self.worker_fit, pool_args)
+            res_list = res_obj.get()
+            pool.close()
+            pool.join()
+        else:
+            res_list = list()
+            for a in pool_args:
+                res_a = self.worker_fit(*a)
+                res_list.append(res_a)
+
+        # Save the output of all runs
+        self.worker_output_list = res_list
+
+        # Extract best solution
+        best_run = sorted(res_list)[0]
+        self.loss = torch.tensor(best_run[0])
+        self.coeffs = best_run[1]
+        self._n_iter_done = best_run[2]
+
+        return True
