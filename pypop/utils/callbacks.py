@@ -45,7 +45,8 @@ class History:
 
 class BaseCallback:
 
-    def __init__(self, print_every):
+    def __init__(self, print_every, verbose=True):
+        self.verbose = verbose
         self.print_every = print_every
         self.coeffs_prev = None
 
@@ -208,20 +209,26 @@ class LearnerCallback(BaseCallback):
 
 class BasicLossCallback(BaseCallback):
 
-    def __init__(self, print_every=100, attr_to_save=[]):
-        super().__init__(print_every=print_every)
+    def __init__(self, print_every=100, attr_to_save=[], verbose=True):
+        super().__init__(print_every=print_every, verbose=verbose)
         self.coeffs_prev = None
+        self.loss_prev = np.inf
         self.hist = History(attr_to_save)
 
     def __call__(self, learner_obj, end=""):
         t = learner_obj._n_iter_done
         if self.coeffs_prev is None:
             self.coeffs_prev = np.nan * torch.zeros_like(learner_obj.coeffs)
+            self.loss_prev = float(learner_obj.loss)
         if ((t+1) % self.print_every == 0) or (t == 0):
             # Save history
             dat = {attr: getattr(learner_obj, attr) for attr in self.hist._fields}
             self.hist.append(**dat)
             # Print message
             dx = torch.abs(self.coeffs_prev - learner_obj.coeffs).max()
-            print(f"\riter: {t+1:>5d} | loss: {learner_obj.loss:.2e} | dx: {dx:.2e}", end=end)
+            this_loss = learner_obj.loss
+            dloss = this_loss - self.loss_prev
+            if self.verbose:
+                print(f"\riter: {t+1:>5d} | loss: {this_loss:.2e} | dloss: {dloss:+.2e} | dx: {dx:.2e}", end=end)
         self.coeffs_prev = learner_obj.coeffs.detach().clone()
+        self.loss_prev = float(learner_obj.loss)
