@@ -221,20 +221,23 @@ class HawkesCumulantLearner(FitterSGD):
     def objective_R(self, R):
         L = torch.diag(self.L_vec)
         C = self.C
-
         C_part = R.mm(L).mm(R.T)
         Kc_part = (R ** 2).mm(C.T) + 2 * (R * (C - R.mm(L))).mm(R.T)
-
         return ((1 - self.cs_ratio) * torch.mean((Kc_part - self.Kc) ** 2)
                 + self.cs_ratio * torch.mean((C_part - self.C) ** 2))
-                # + self.cs_ratio * torch.mean((C_part - self.F.mm(self.F.T)) ** 2))
 
-    @staticmethod
-    def worker_fit(self, i, x0, kwargs):
-        conv = super(HawkesCumulantLearner, self)
-        return self.loss.item(), self.coeffs.detach(), self._n_iter_done
+    def objective_G(self, G):
+        R = torch.inverse(torch.eye(self.dim) - G)
+        return self.objective_R(R)
 
-    def fit_R(self, x0=None, seed=None, num_starts=1, num_workers=1, **kwargs):
-        if x0 is None:  # Sample random initial guess
-            x0 = self._compute_initial_guess(seed=rand.randint(2**31 - 1))
-        return self.fit(objective_func=self.objective_R, x0=x0, **kwargs)
+    def fit_R(self, R_start=None, seed=None, **kwargs):
+        if R_start is None:  # Sample random initial guess
+            R_start = self._compute_initial_guess(seed=seed)
+        return self.fit(objective_func=self.objective_R, x0=R_start, **kwargs)
+
+    def fit_G(self, G_start=None, seed=None, **kwargs):
+        if G_start is None:  # Sample random initial guess
+            R_start = self._compute_initial_guess(seed=seed)
+            G_start = torch.eye(self.dim) - torch.inverse(R_start)
+            G_start = G_start.detach()
+        return self.fit(objective_func=self.objective_G, x0=G_start, **kwargs)
