@@ -1,5 +1,6 @@
 import matplotlib
 from matplotlib.backends.backend_pgf import FigureCanvasPgf
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
 import numpy as np
@@ -26,16 +27,16 @@ def set_notebook_config():
         "axes.titlesize": 9,                # LaTeX default is 10pt font.
         "axes.labelsize": 7,                # LaTeX default is 10pt font.
         "legend.fontsize": 7,               # Make the legend/label fonts a little smaller
-        "legend.frameon": False,            # Remove the black frame around the legend
+        "legend.frameon": True,             # Remove the black frame around the legend
         "xtick.labelsize": 7,
         "ytick.labelsize": 7,
-        # "pgf.texsystem": "xelatex",         # use Xelatex which is TTF font aware
+        "pgf.texsystem": "xelatex",         # use Xelatex which is TTF font aware
         "pgf.rcfonts": False,               # Use pgf.preamble, ignore standard Matplotlib RC
         "pgf.preamble": [
             r'\usepackage{fontspec}',
             r'\usepackage{unicode-math}',
+            r'\usepackage{amsmath}',
             r'\setmainfont{Linux Libertine O}',
-            r'\setmathfont{Linux Libertine O}',
         ]
     }
     matplotlib.backend_bases.register_backend('pdf', FigureCanvasPgf)
@@ -141,30 +142,57 @@ def make_plot_df(df, suf_col_dict, agg_col, threshold=THRESHOLD):
         return df_plot
 
 
-def plotmat_sidebyside(A, B, C=None, label_A='', label_B='', label_C='', figsize=(5.5, 1.95)):
-    if C is None:
-        C = A
+def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.95), grid=None):
+    if labels is None:
+        assert isinstance(mats, dict)
+        labels = list(mats.keys())
+        mats = list(mats.values())
+
+    if grid is not None:
+        fig, axs = plt.subplots(*grid, figsize=figsize)
+        axs = np.ravel(axs)
+    elif len(mats) == 2:
         fig, axs = plt.subplots(1, 2, figsize=figsize)
-    else:
+    elif len(mats) == 3:
         fig, axs = plt.subplots(1, 3, figsize=figsize)
+    elif len(mats) == 4:
+        fig, axs = plt.subplots(2, 2, figsize=figsize)
+        axs = np.ravel(axs)
+    elif len(mats) == 6:
+        fig, axs = plt.subplots(2, 3, figsize=figsize)
+        axs = np.ravel(axs)
+    else:
+        n = len(mats)
+        num_cols = int(np.ceil(np.sqrt(n)))
+        num_rows = int(np.floor(np.sqrt(n)))
+        fig, axs = plt.subplots(num_rows, num_cols, figsize=figsize)
+        axs = np.ravel(axs)
 
-    vmin = min(A.min(), B.min(), C.min())
-    vmax = max(A.max(), B.max(), C.max())
+    if (vmin is None) and (vmax is None):
+        extend = 'neither'
+    elif (vmin is not None) and (vmax is None):
+        extend = 'min'
+    elif (vmin is None) and (vmax is not None):
+        extend = 'max'
+    else:
+        extend = 'both'
+
+    vmin = min(map(lambda A: A.min(), mats)) if vmin is None else vmin
+    vmax = max(map(lambda A: A.max(), mats)) if vmax is None else vmax
     norm = colors.Normalize(vmin=vmin, vmax=vmax)
-    cmap = 'RdYlBu_r'
+    cmap = 'plasma'
 
-    plt.sca(axs[0])
-    plt.imshow(A, norm=norm, cmap=cmap, interpolation='none')
-    plt.title(label_A)
-    plt.colorbar()
+    for ax, M, label in zip(axs, mats, labels):
+        ax.set_aspect(1.0)
+        plt.sca(ax)
+        ax.invert_yaxis()
+        p = plt.pcolormesh(M, norm=norm, cmap=cmap)
+        p.cmap.set_over('white')
+        p.cmap.set_under('black')
+        plt.title(label, pad=10)
 
-    plt.sca(axs[1])
-    plt.imshow(B, norm=norm, cmap=cmap, interpolation='none')
-    plt.title(label_B)
-    plt.colorbar()
-
-    if len(axs) == 3:
-        plt.sca(axs[2])
-        plt.imshow(C, norm=norm, cmap=cmap, interpolation='none')
-        plt.title(label_C)
-        plt.colorbar()
+        # create an axes on the right side of ax. The width of cax will be 5%
+        # of ax and the padding between cax and ax will be fixed at 0.05 inch.
+        divider = make_axes_locatable(ax)
+        cax = divider.append_axes("right", size="5%", pad=0.1)
+        plt.colorbar(p, cax=cax, extend=extend)
