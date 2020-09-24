@@ -215,12 +215,12 @@ class BasicLossCallback(BaseCallback):
         self.loss_prev = np.inf
         self.hist = History(attr_to_save)
 
-    def __call__(self, learner_obj, end=""):
+    def __call__(self, learner_obj, end="", force=False):
         t = learner_obj._n_iter_done
         if self.coeffs_prev is None:
             self.coeffs_prev = np.nan * torch.zeros_like(learner_obj.coeffs)
             self.loss_prev = float(learner_obj.loss)
-        if ((t+1) % self.print_every == 0) or (t == 0):
+        if ((t+1) % self.print_every == 0) or (t == 0) or force:
             # Save history
             dat = {attr: getattr(learner_obj, attr) for attr in self.hist._fields}
             self.hist.append(**dat)

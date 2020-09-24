@@ -228,18 +228,17 @@ class FitterSGD(Fitter):
             # Check convergence in callback (if available)
             if hasattr(callback, 'has_converged'):
                 if callback.has_converged():
-                    # Callback before the end
-                    callback(self, end='\n')
+                    callback(self, end='\n', force=True)  # Callback before the end
                     return True
+
             # Or, check convergence in fitter, and then callback
             if self._check_convergence(tol):
-                # Callback before the end
-                callback(self, end='\n')
+                callback(self, end='\n', force=True)  # Callback before the end
                 return True
-            # Callback at each iteration
-            callback(self)
-        # Callback before the end
-        callback(self, end='\n')
+
+            callback(self)  # Callback at each iteration
+
+        callback(self, end='\n', force=True)  # Callback before the end
         return False
 
 
