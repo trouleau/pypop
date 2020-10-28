@@ -50,6 +50,8 @@ class BaseCallback:
         self.print_every = print_every
         self.coeffs_prev = None
 
+    def __call__(self, learner_obj, end=None, force=False):
+        raise NotImplementedError("Must be implemented in child class")
 
 class LearnerCallback(BaseCallback):
 
@@ -207,6 +209,29 @@ class LearnerCallback(BaseCallback):
         return {attr: self.history[attr] for attr in self.history._fields}
 
 
+class BasicTimerCallback(BaseCallback):
+
+    def __init__(self, print_every=100, verbose=True):
+        super().__init__(print_every=print_every, verbose=verbose)
+        self.time_prev = None
+        self.coeffs_prev = None
+        self.hist = History(field_names=['dx', 'dtime'])
+
+    def __call__(self, learner_obj, end="", force=False):
+        t = learner_obj._n_iter_done
+        if self.time_prev is None:
+            self.time_prev = time.time()
+            self.coeffs_prev = np.nan * torch.zeros(learner_obj.coeffs.shape)
+        if ((t+1) % self.print_every == 0) or (t == 0) or force:
+            time_now = time.time()
+            dtime = time_now - self.time_prev
+            dx = torch.abs(self.coeffs_prev - learner_obj.coeffs).max()
+            self.hist.append(dx=dx, dtime=dtime)
+            print(f"\riter: {t+1:>5d} | dx: {dx:<4.2e} | time/iter: {dtime:<4.2e}", end=end)
+        self.time_prev = time.time()
+        self.coeffs_prev = learner_obj.coeffs.detach().clone()
+
+
 class BasicLossCallback(BaseCallback):
 
     def __init__(self, print_every=100, attr_to_save=[], verbose=True):
@@ -218,7 +243,7 @@ class BasicLossCallback(BaseCallback):
     def __call__(self, learner_obj, end="", force=False):
         t = learner_obj._n_iter_done
         if self.coeffs_prev is None:
-            self.coeffs_prev = np.nan * torch.zeros_like(learner_obj.coeffs)
+            self.coeffs_prev = np.nan * torch.zeros(learner_obj.coeffs.shape)
             self.loss_prev = float(learner_obj.loss)
         if ((t+1) % self.print_every == 0) or (t == 0) or force:
             # Save history
