@@ -204,7 +204,7 @@ class HawkesCumulantLearner(FitterSGD):
         self.nphc = nphc
         self.L_vec = torch.tensor(nphc.mean_intensity)
         self.C = torch.tensor(nphc.covariance)
-        self.F = torch.tensor(scipy.linalg.sqrtm(nphc.covariance))
+        self.F = torch.tensor(scipy.linalg.sqrtm(nphc.covariance).astype(float))
         self.Kc = torch.tensor(nphc.skewness.T)
         if self.cs_ratio is None:
             self.cs_ratio = self._estimate_cs_ratio()
