@@ -15,12 +15,18 @@ from tick.hawkes import HawkesCumulantMatching as _HawkesCumulantMatching
 
 def compute_R(G):
     """Compute the matrix R from a matrix G"""
-    return inv(np.eye(G.shape[0]) - G)
+    dim = G.shape[0]
+    if isinstance(G, torch.Tensor):
+        return torch.inverse(torch.eye(dim) - G)
+    return inv(np.eye(dim) - G)
 
 
 def compute_G(R):
     """Compute the matrix G from a matrix R"""
-    return np.eye(R.shape[0]) - inv(R)
+    dim = R.shape[0]
+    if isinstance(R, torch.Tensor):
+        return torch.eye(dim) - torch.inverse(R)
+    return np.eye(dim) - inv(R)
 
 
 def compute_cumulants(G, mus, R=None, return_R=False):
