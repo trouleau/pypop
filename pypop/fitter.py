@@ -97,17 +97,26 @@ class FitterSGD(Fitter):
         # self.loss = torch.tensor(np.inf)
         self.loss = np.inf
 
-    def _take_gradient_step(self):
-        # Gradient update
-        self.optimizer.zero_grad()
-        self._loss = self._objective_func(self.coeffs) + self.penalty(self.coeffs)
-        self._loss.backward()
-        self.optimizer.step()
-        self.scheduler.step()
-        self.loss = self._loss.detach()
-        if self.positive_constraint:  # Project to positive
-            with torch.no_grad():
-                self.coeffs[self.coeffs < 1e-20] = 1e-20
+    def _init_penalty(self, penalty_name, penalty_link, elastic_net_ratio, penalty_C):
+        # Set name of penalty
+        self.penalty_name = penalty_name
+        # Check penalty link type
+        if penalty_link is None:
+            penalty_link = lambda x: x
+        self.penalty_link = penalty_link
+        # Set config
+        if self.penalty_name == 'elasticnet':
+            self.elastic_net_ratio = elastic_net_ratio
+            self.penalty_C = penalty_C
+        elif self.penalty_name == 'l1':
+            self.elastic_net_ratio = 1.0
+            self.penalty_C = penalty_C
+        elif self.penalty_name == 'l2':
+            self.elastic_net_ratio = 0.0
+            self.penalty_C = penalty_C
+        elif self.penalty_name == 'none':
+            self.elastic_net_ratio = 1.0
+            self.penalty_C = np.inf
 
     @property
     def strength_ridge(self):
@@ -122,10 +131,22 @@ class FitterSGD(Fitter):
             # If no penalty, return 0.0 penalty
             return 0.0
         # L2 Penalty
-        l2_reg = torch.sum(coeffs ** 2)
+        l2_reg = torch.sum(self.penalty_link(coeffs) ** 2)
         # L1 Penalty
-        l1_reg = self.penaly_l1(coeffs, self.penalty_l1_target)
+        l1_reg = torch.abs(self.penalty_link(coeffs)).sum()
         return self.strength_lasso * l1_reg + self.strength_ridge * l2_reg
+
+    def _take_gradient_step(self):
+        # Gradient update
+        self.optimizer.zero_grad()
+        self._loss = self._objective_func(self.coeffs) + self.penalty(self.coeffs)
+        self._loss.backward()
+        self.optimizer.step()
+        self.scheduler.step()
+        self.loss = self._loss.detach()
+        if self.positive_constraint:  # Project to positive
+            with torch.no_grad():
+                self.coeffs[self.coeffs < 1e-10] = 1e-10
 
     @property
     def coeffs_copy(self):
@@ -136,8 +157,8 @@ class FitterSGD(Fitter):
         return self._n_iter_done
 
     def fit(self, *, objective_func, x0, optimizer, lr, lr_sched, tol, max_iter,
-            penalty_name='none', elastic_net_ratio=0.95, penalty_C=1e3, seed=None,
-            positive_constraint=False, callback=None):
+            penalty_name='none', penalty_C=1e3, penalty_link=None, elastic_net_ratio=0.95,
+            seed=None, positive_constraint=False, callback=None):
         """
         Fit the model.
 
@@ -159,13 +180,18 @@ class FitterSGD(Fitter):
             Maximum number of iterations
         penalty_name : str
             Type of penalty
-        elastic_net_ratio : float
-            Ratio of elasticnet penalty
         penalty_C : float
             Inverse weight of penalty
+        penalty_link : callable (optional, default: None)
+            Link function to apply to coefficients to for the penalty term.
+            Namely, let $x$ be the coefficients, $g(\cdot)$ be the penalty and
+            $f(\cdot)$ be the link function, then the penalty term is $g(f(x))$
+        elastic_net_ratio : float
+            Ratio of elasticnet penalty
+            (Set to 1 for L1 only, set to 0 for L2 only)
         seed : int
             Random seed (for both `numpy` and `torch`)
-        positive_constraint : bool
+        positive_constraint : bool (optional, default: True)
             Indicate whether to project the gradient steps onto the positive
             plane.
         callback : callable
@@ -189,27 +215,10 @@ class FitterSGD(Fitter):
         # Set alias for objective function
         self._objective_func = objective_func
         # Set penalty term attributes
-        self.penalty_name = penalty_name
-        if self.penalty_name == 'elasticnet':
-            self.elastic_net_ratio = elastic_net_ratio
-            self.penalty_C = penalty_C
-            self.penaly_l1 = torch.nn.L1Loss()
-            self.penalty_l1_target = torch.zeros_like(self.coeffs)
-        elif self.penalty_name == 'l1':
-            self.elastic_net_ratio = 1.0
-            self.penalty_C = penalty_C
-            self.penaly_l1 = torch.nn.L1Loss()
-            self.penalty_l1_target = torch.zeros_like(self.coeffs)
-        elif self.penalty_name == 'l2':
-            self.elastic_net_ratio = 0.0
-            self.penalty_C = penalty_C
-            self.penaly_l1 = lambda x,y: 0
-            self.penalty_l1_target = None
-        elif self.penalty_name == 'none':
-            self.elastic_net_ratio = 1.0  # to put zero `weight_decay` in optim
-            self.penalty_C = np.inf
-            self.penaly_l1 = lambda x,y: 0
-            self.penalty_l1_target = None
+        self._init_penalty(penalty_name=penalty_name,
+                           penalty_link=penalty_link,
+                           elastic_net_ratio=elastic_net_ratio,
+                           penalty_C=penalty_C)
         # Set positive constraint attribute (used in `_take_gradient_step`)
         self.positive_constraint = positive_constraint
         # Reset optimizer & scheduler
@@ -236,7 +245,8 @@ class FitterSGD(Fitter):
                 callback(self, end='\n', force=True)  # Callback before the end
                 return True
 
-            callback(self)  # Callback at each iteration
+            if t < int(max_iter) - 1:
+                callback(self)  # Callback at each iteration
 
         callback(self, end='\n', force=True)  # Callback before the end
         return False
