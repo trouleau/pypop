@@ -113,13 +113,12 @@ def _build_U(i, j, k, d, lam, F, C, x):
 
 class HawkesCumulantLearner(FitterSGD):
 
-    def __init__(self, integration_support, gamma=0.0, cs_ratio=None):
+    def __init__(self, integration_support, cs_ratio=None):
         super().__init__()
         self._cumulants_ready = False
         self.integration_support = integration_support
         assert isinstance(integration_support, float) and (integration_support > 0)
         self.cs_ratio = cs_ratio
-        self.gamma = gamma
         self.device = 'cuda' if torch.cuda.is_available() and device == 'cuda' else 'cpu'
 
     def observe(self, events):
