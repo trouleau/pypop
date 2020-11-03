@@ -246,7 +246,7 @@ class HawkesCumulantLearner(FitterSGD):
             R_start = self._compute_initial_guess(seed=seed)
         return self.fit(objective_func=self.objective_R, x0=R_start, **kwargs)
 
-    def √(self, R_start=None, seed=None, **kwargs):
+    def fit_R_custom_reg(self, R_start=None, seed=None, **kwargs):
         if R_start is None:  # Sample random initial guess
             R_start = self._compute_initial_guess(seed=seed)
         return self.fit(objective_func=self.objective_R_custom_reg, x0=R_start, **kwargs)
