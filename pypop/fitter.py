@@ -146,7 +146,7 @@ class FitterSGD(Fitter):
         self.loss = self._loss.detach()
         if self.positive_constraint:  # Project to positive
             with torch.no_grad():
-                self.coeffs[self.coeffs < 1e-10] = 1e-10
+                self.coeffs[self.coeffs < 1e-20] = 1e-20
 
     @property
     def coeffs_copy(self):
