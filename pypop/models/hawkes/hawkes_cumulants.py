@@ -231,6 +231,12 @@ class HawkesCumulantLearner(FitterSGD):
         return ((1 - self.cs_ratio) * torch.mean((Kc_part - self.Kc) ** 2)
                 + self.cs_ratio * torch.mean((C_part - self.C) ** 2))
 
+    def objective_R_custom_reg(self, R):
+        loss = self.objective_R(R)
+        G = torch.eye(R.shape[0]) - torch.inverse(R)
+        reg = 1000.0 * (G < -0.001)
+        return loss + reg
+
     def objective_G(self, G):
         R = torch.inverse(torch.eye(self.dim) - G)
         return self.objective_R(R)
@@ -239,6 +245,11 @@ class HawkesCumulantLearner(FitterSGD):
         if R_start is None:  # Sample random initial guess
             R_start = self._compute_initial_guess(seed=seed)
         return self.fit(objective_func=self.objective_R, x0=R_start, **kwargs)
+
+    def √(self, R_start=None, seed=None, **kwargs):
+        if R_start is None:  # Sample random initial guess
+            R_start = self._compute_initial_guess(seed=seed)
+        return self.fit(objective_func=self.objective_R_custom_reg, x0=R_start, **kwargs)
 
     def fit_G(self, G_start=None, seed=None, **kwargs):
         if G_start is None:  # Sample random initial guess
