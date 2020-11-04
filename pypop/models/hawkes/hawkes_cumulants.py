@@ -235,8 +235,12 @@ class HawkesCumulantLearner(FitterSGD):
         loss = self.objective_R(R)
         G = self.penalty_link(R)
         reg = torch.nn.functional.relu(-G).sum() * 1 / self.custom_reg_C
-        if self._n_iter_done % 100 == 0:
-            print(f" ---- {loss.item():.2e} + {reg.item():.2e} -- {G.detach().min():.2f}")
+        return loss + reg
+
+    def objective_G_custom_reg(self, G):
+        R = torch.inverse(torch.eye(self.dim) - G)
+        loss = self.objective_R(R)
+        reg = torch.nn.functional.relu(-G).sum() * 1 / self.custom_reg_C
         return loss + reg
 
     def objective_G(self, G):
@@ -261,3 +265,8 @@ class HawkesCumulantLearner(FitterSGD):
             G_start = torch.eye(self.dim) - torch.inverse(R_start)
             G_start = G_start.detach()
         return self.fit(objective_func=self.objective_G, x0=G_start, **kwargs)
+
+    def fit_G_custom_reg(self, G_start, seed=None, custom_reg_C=1000.0, **kwargs):
+        print(f'set custom reg C to {custom_reg_C}')
+        self.custom_reg_C = custom_reg_C
+        return self.fit(objective_func=self.objective_G_custom_reg, x0=G_start, **kwargs)
