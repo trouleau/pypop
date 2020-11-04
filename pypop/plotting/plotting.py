@@ -10,35 +10,61 @@ from ..utils import metrics
 THRESHOLD = 0.05  # Default threshold for small values
 
 
+SIGCONF_RCPARAMS= {
+    # Fig params
+    "figure.autolayout": True,          # Makes sure nothing the feature is neat & tight.
+    "figure.figsize": (5.5, 2.95),      # Column width: 3.333 in, space between cols: 0.333 in.
+    "figure.dpi": 150,                  # Displays figures nicely in notebooks.
+    # Axes params
+    "axes.linewidth": 0.5,              # Matplotlib's current default is 0.8.
+    "hatch.linewidth": 0.3,
+    "xtick.major.width": 0.5,
+    "xtick.minor.width": 0.5,
+    'xtick.major.pad': 1.0,
+    'xtick.major.size': 1.75,
+    'xtick.minor.pad': 1.0,
+    'xtick.minor.size': 1.0,
+    "ytick.major.width": 0.5,
+    "ytick.minor.width": 0.5,
+    'ytick.major.pad': 1.0,
+    'ytick.major.size': 1.75,
+    'ytick.minor.pad': 1.0,
+    'ytick.minor.size': 1.0,
+    "axes.labelpad": 0.5,
+    # Plot params
+    "lines.linewidth": 0.8,              # Width of lines
+    "lines.markeredgewidth": 0.3,
+    "errorbar.capsize": 0.5,
+    # Legend params
+    "legend.fontsize": 8.5,        # Make the legend/label fonts a little smaller
+    "legend.frameon": True,              # Remove the black frame around the legend
+    "legend.handletextpad": 0.3,
+    "legend.borderaxespad": 0.2,
+    "legend.labelspacing": 0.1,
+    "patch.linewidth": 0.5,
+    # Font params
+    "text.usetex": True,                 # use LaTeX to write all text
+    "font.family": "serif",              # use serif rather than sans-serif
+    "font.serif": "Linux Libertine O",   # use "Linux Libertine" as the standard font
+    "font.size": 9,
+    "axes.titlesize": 8,          # LaTeX default is 10pt font.
+    "axes.labelsize": 8,          # LaTeX default is 10pt font.
+    "xtick.labelsize": 6,
+    "ytick.labelsize": 6,
+    # PDF settings
+    "pgf.texsystem": "xelatex",         # Use Xelatex which is TTF font aware
+    "pgf.rcfonts": False,               # Use pgf.preamble, ignore standard Matplotlib RC
+    "pgf.preamble": [
+        r'\usepackage{fontspec}',
+        r'\usepackage{unicode-math}',
+        r'\usepackage{libertine}',
+        r'\setmainfont{Linux Libertine O}',
+        r'\setmathfont{Linux Libertine O}',
+    ]
+}
+
+
 def set_notebook_config():
-    SIGCONF_RCPARAMS = {
-        "figure.autolayout": True,          # Makes sure nothing the feature is neat & tight.
-        "figure.figsize": (5.5, 1.95),       # Column width: 3.333 in, space between cols: 0.333 in.
-        "figure.dpi": 150,                  # Displays figures nicely in notebooks.
-        "axes.linewidth": 0.5,              # Matplotlib's current default is 0.8.
-        "xtick.major.width": 0.5,
-        "xtick.minor.width": 0.5,
-        "ytick.major.width": 0.5,
-        "ytick.minor.width": 0.5,
-        "text.usetex": True,                # use LaTeX to write all text
-        "font.family": "serif",             # use serif rather than sans-serif
-        "font.serif": "Linux Libertine O",  # use "Linux Libertine" as the standard font
-        "font.size": 9,
-        "axes.titlesize": 9,                # LaTeX default is 10pt font.
-        "axes.labelsize": 7,                # LaTeX default is 10pt font.
-        "legend.fontsize": 7,               # Make the legend/label fonts a little smaller
-        "legend.frameon": True,             # Remove the black frame around the legend
-        "xtick.labelsize": 7,
-        "ytick.labelsize": 7,
-        "pgf.texsystem": "xelatex",         # use Xelatex which is TTF font aware
-        "pgf.rcfonts": False,               # Use pgf.preamble, ignore standard Matplotlib RC
-        "pgf.preamble": [
-            r'\usepackage{fontspec}',
-            r'\usepackage{unicode-math}',
-            r'\usepackage{amsmath}',
-            r'\setmainfont{Linux Libertine O}',
-        ]
-    }
     matplotlib.backend_bases.register_backend('pdf', FigureCanvasPgf)
     matplotlib.rcParams.update(SIGCONF_RCPARAMS)
     np.set_printoptions(edgeitems=10, linewidth=1000)
