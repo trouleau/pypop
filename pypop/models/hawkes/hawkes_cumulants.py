@@ -145,8 +145,9 @@ class HawkesCumulantLearner(FitterSGD):
         if not C.shape == (self.dim, self.dim):
             raise ValueError(f"Invalid shape for `C`")
         self.C = torch.tensor(C)
-        self.F = torch.tensor(scipy.linalg.sqrtm(self.C))
-        assert np.allclose(self.F @ self.F.T, self.C)
+        self.F = torch.tensor(scipy.linalg.sqrtm(self.C).astype(np.float))
+        if not np.allclose(self.F @ self.F.T, self.C):
+            print('WARNING: F @ F.T not close to C')
         if not Kc.shape == (self.dim, self.dim):
             raise ValueError(f"Invalid shape for `Kc`")
         self.Kc = torch.tensor(Kc)
