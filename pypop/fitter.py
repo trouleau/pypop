@@ -20,7 +20,7 @@ class Fitter(metaclass=abc.ABCMeta):
         # return False
         loss = float(self.loss)
         if hasattr(self, 'loss_prev'):
-            rel_loss = abs(loss - loss_prev) / abs(loss_prev)
+            rel_loss = abs(loss - self.loss_prev) / abs(self.loss_prev)
             if rel_loss < tol:
                 return True
         self.loss_prev = float(loss)
