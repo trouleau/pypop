@@ -2,7 +2,7 @@ from multiprocessing import Pool
 from functools import partial
 import numpy as np
 import numpy.linalg as al
-from numpy.linalg import inv
+from numpy.linalg import inv, norm
 import scipy.linalg
 
 import torch
@@ -73,50 +73,6 @@ def compute_cumulants(G, mus, R=None, return_R=False):
     return L, C, Kc
 
 
-def _build_B(m, i, j, k, d, lam_m, F, C):
-    #print(f"build_B(m={m}, i={i}, j={j}, k={k}, d={d}, lam_m={lam_m}, F={F.shape}, C={C.shape}")
-    B = torch.zeros((d, d), dtype=torch.double)
-    for n in range(d):
-        for s in range(d):
-            #print(f"B[{n}, {s}] = C[{k}, {m}] * F[{i}, {n}] * F[{j}, {s}]  + C[{j}, {m}] * F[{i}, {n}] * F[{k}, {s}] + C[{i}, {m}] * F[{j}, {n}] * F[{k}, {s}]")
-            #print(f"        = {C[k, m]:.3f} * {F[i, n]:.3f} * {F[j, s]:.3f}  + {C[j, m]:.3f} * {F[i, n]:.3f} * {F[k, s]:.3f} + {C[i, m]:.3f} * {F[j, n]:.3f} * {F[k, s]:.3f}")
-            B[n, s] = C[k, m] * F[i, n] * F[j, s]  + C[j, m] * F[i, n] * F[k, s] + C[i, m] * F[j, n] * F[k, s]
-    B /= lam_m
-    return B
-
-
-def _build_Ax(m, i, j, k, d, lam_m, F, x_m, return_all=False):
-    #print(f"build_Ax(m={m}, i={i}, j={j}, k={k}, d={d}, lam_m={lam_m}, F={F.shape}, x_m={x_m.shape}")
-    A = torch.zeros((d, d**2), dtype=torch.double)
-    for n in range(d):
-        for s in range(d):
-            A[n, s*d:(s+1)*d] = F[i, n] * F[j, s] * F[k, :]
-    A *= 2 / torch.sqrt(lam_m)
-
-    d_x = torch.zeros((d**2, d), dtype=torch.double)
-    for m in range(d):
-        d_x[m*d:(m+1)*d, m] = x_m
-
-    if return_all:
-        return A, d_x
-
-    return A.mm(d_x)
-
-
-def _build_U_m(m, i, j, k, d, lam_m, F, C, x_m):
-    B = _build_B(m, i, j, k, d, lam_m, F, C)
-    Ax = _build_Ax(m, i, j, k, d, lam_m, F, x_m)
-    return B - Ax
-
-
-def _build_U(i, j, k, d, lam, F, C, x):
-    U = torch.zeros((d**2, d**2), dtype=torch.double)
-    for m in range(d):
-        U[m*d:(m+1)*d, m*d:(m+1)*d] = _build_U_m(m, i, j, k, d, lam[m], F, C, x[:, m])
-    return U
-
-
-
 class HawkesCumulantLearner(FitterSGD):
 
     def __init__(self, integration_support, cs_ratio=None):
@@ -156,8 +112,8 @@ class HawkesCumulantLearner(FitterSGD):
         self._cumulants_ready = True
 
     def _estimate_cs_ratio(self):
-        norm_skewness = torch.sum(self.Kc ** 2)
-        norm_covariance = torch.sum(self.C ** 2)
+        norm_skewness = norm(self.Kc.numpy()) ** 2
+        norm_covariance = norm(self.C.numpy()) ** 2
         return float(norm_skewness / (norm_skewness + norm_covariance))
 
     def _estimate_mean(self):
@@ -224,11 +180,13 @@ class HawkesCumulantLearner(FitterSGD):
         R_start = self.F @ X_start @ torch.diag(1 / self.L_vec.sqrt())
         return R_start.detach()
 
-    def objective_R(self, R):
+    def objective_R(self, R, return_parts=False):
         L = torch.diag(self.L_vec)
         C = self.C
         C_part = R.mm(L).mm(R.T)
         Kc_part = (R ** 2).mm(C.T) + 2 * (R * (C - R.mm(L))).mm(R.T)
+        if return_parts:
+            return C_part, Kc_part
         return ((1 - self.cs_ratio) * torch.mean((Kc_part - self.Kc) ** 2)
                 + self.cs_ratio * torch.mean((C_part - self.C) ** 2))
 
