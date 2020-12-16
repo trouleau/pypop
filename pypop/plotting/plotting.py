@@ -55,6 +55,7 @@ SIGCONF_RCPARAMS= {
     "pgf.texsystem": "xelatex",         # Use Xelatex which is TTF font aware
     "pgf.rcfonts": False,               # Use pgf.preamble, ignore standard Matplotlib RC
     "pgf.preamble": [
+        r"\usepackage{amsmath}",
         r'\usepackage{fontspec}',
         r'\usepackage{unicode-math}',
         r'\usepackage{libertine}',
