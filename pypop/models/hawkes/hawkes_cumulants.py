@@ -190,42 +190,20 @@ class HawkesCumulantLearner(FitterSGD):
         return ((1 - self.cs_ratio) * torch.mean((Kc_part - self.Kc) ** 2)
                 + self.cs_ratio * torch.mean((C_part - self.C) ** 2))
 
-    def objective_R_custom_reg(self, R):
-        loss = self.objective_R(R)
-        G = self.penalty_link(R)
-        reg = torch.nn.functional.relu(-G).sum() * 1 / self.custom_reg_C
-        return loss + reg
-
-    def objective_G_custom_reg(self, G):
-        R = torch.inverse(torch.eye(self.dim) - G)
-        loss = self.objective_R(R)
-        reg = torch.nn.functional.relu(-G).sum() * 1 / self.custom_reg_C
-        return loss + reg
-
     def objective_G(self, G):
         R = torch.inverse(torch.eye(self.dim) - G)
         return self.objective_R(R)
 
     def fit_R(self, R_start=None, seed=None, **kwargs):
         if R_start is None:  # Sample random initial guess
+            print('- Sample random initial guess R')
             R_start = self._compute_initial_guess(seed=seed)
         return self.fit(objective_func=self.objective_R, x0=R_start, **kwargs)
 
-    def fit_R_custom_reg(self, R_start=None, seed=None, custom_reg_C=1000.0, **kwargs):
-        if R_start is None:  # Sample random initial guess
-            R_start = self._compute_initial_guess(seed=seed)
-        print(f'set custom reg C to {custom_reg_C}')
-        self.custom_reg_C = custom_reg_C
-        return self.fit(objective_func=self.objective_R_custom_reg, x0=R_start, **kwargs)
-
     def fit_G(self, G_start=None, seed=None, **kwargs):
         if G_start is None:  # Sample random initial guess
+            print('- Sample random initial guess G')
             R_start = self._compute_initial_guess(seed=seed)
             G_start = torch.eye(self.dim) - torch.inverse(R_start)
             G_start = G_start.detach()
         return self.fit(objective_func=self.objective_G, x0=G_start, **kwargs)
-
-    def fit_G_custom_reg(self, G_start, seed=None, custom_reg_C=1000.0, **kwargs):
-        print(f'set custom reg C to {custom_reg_C}')
-        self.custom_reg_C = custom_reg_C
-        return self.fit(objective_func=self.objective_G_custom_reg, x0=G_start, **kwargs)

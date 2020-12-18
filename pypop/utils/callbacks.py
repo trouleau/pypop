@@ -252,8 +252,8 @@ class BasicLossCallback(BaseCallback):
             # Print message
             dx = torch.abs(self.coeffs_prev - learner_obj.coeffs).max()
             this_loss = learner_obj.loss
-            dloss = this_loss - self.loss_prev
+            rel_loss = abs(this_loss - self.loss_prev) /abs(self.loss_prev)
             if self.verbose:
-                print(f"\riter: {t+1:>5d} | loss: {this_loss:.2e} | dloss: {dloss:+.2e} | dx: {dx:.2e}", end=end)
+                print(f"\riter: {t+1:>5d} | loss: {this_loss:.2e} | rel_loss: {rel_loss:+.2e} | dx: {dx:.2e}", end=end)
         self.coeffs_prev = learner_obj.coeffs.detach().clone()
         self.loss_prev = float(learner_obj.loss)
