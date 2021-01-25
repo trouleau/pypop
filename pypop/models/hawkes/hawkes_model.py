@@ -1,8 +1,10 @@
 import torch
 import numpy as np
 
+from .. import Model
 
-class HawkesModel:
+
+class HawkesModel(Model):
 
     def __init__(self, excitation, verbose=False, device='cpu'):
         """
@@ -15,16 +17,10 @@ class HawkesModel:
         excitation: excitation
             Excitation object
         """
+        super().__init__(verbose=verbose, device=device)
         self.excitation = excitation
-        self.n_jumps = None
-        self.dim = None
-        self.n_params = None
-        self.n_var_params = None
-        self._fitted = False
-        self.verbose = verbose
-        self.device = 'cuda' if torch.cuda.is_available() and device == 'cuda' else 'cpu'
 
-    def set_data(self, events, end_time):
+    def observe(self, events, end_time=None):
         """
         Set the data for the model
         """
@@ -32,13 +28,12 @@ class HawkesModel:
         # Set various util attributes
         self.dim = len(events)
         self.n_params = self.dim * (self.dim + 1)
-        self.n_var_params = 2 * self.n_params
         self.n_jumps = sum(map(len, events))
-        self.end_time = max([max(num) for num in events if len(num) > 0])
+        self.end_time = end_time or max([max(num) for num in events if len(num) > 0])
         self.events = events
-        if not self._fitted:
+        if not self._observed:
             self._init_cache()
-        self._fitted = True
+        self._observed = True
 
     def _init_cache(self):
         """
@@ -77,7 +72,7 @@ class HawkesModel:
             integ_excit = self.excitation.callIntegral(t_diff).sum(-1)  # (M)
             self._cache_integral[j, :] = integ_excit
 
-    def log_likelihood(self, mu, W):
+    def log_likelihood(self, coeffs):
         """
         Log likelihood of Hawkes Process for the given parameters mu and W
 
@@ -90,6 +85,10 @@ class HawkesModel:
             (dim x dim x M) --> M is for the number of different excitation functions
             The weight matrix.
         """
+        # Split coeffs
+        mu = coeffs[:self.dim]
+        W = coeffs[self.dim:self.dim + self.dim**2].reshape(self.dim, self.dim, self.excitation.M)
+        # Compute log-likelihood
         log_like = 0
         for i in range(self.dim):
             # W[i] (dim x M)

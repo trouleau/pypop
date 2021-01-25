@@ -2,25 +2,38 @@ import torch
 import numpy as np
 import math
 
+from .noisy_hawkes_utils import compute_integrated_time_func
+
 
 class Excitation:
 
-    def __init__(self, cut_off=float("inf")):
+    def __init__(self, M, cut_off=float("inf")):
         """
         cut_off : float
             Time window size that we calculate the excitation functions for.
         """
+        self.M = M
         self.cut_off = cut_off
 
     def call(self, t):
         """
         value of excitation function
+
+        Arguments:
+        ----------
+        t : torch.Tensor
+            Query time
         """
         raise NotImplementedError('Must be implemented in child class')
 
     def callIntegral(self, t):
         """
-        Integral of excitation function
+        Integral of excitation function up to time `t`
+
+        Arguments:
+        ----------
+        t : torch.Tensor
+            Query time
         """
         raise NotImplementedError('Must be implemented in child class')
 
@@ -40,19 +53,28 @@ class ExponentialKernel(Excitation):
         M : int
             The number of basis functions
         """
-        super(ExponentialKernel, self).__init__(cut_off)
+        super(ExponentialKernel, self).__init__(M=1, cut_off=cut_off)
         self.decay = decay
-        self.M = 1
 
     def call(self, t):
         """
         value of excitation function
+
+        Arguments:
+        ----------
+        t : torch.Tensor
+            Query time
         """
         return self.decay * torch.exp(- self.decay * t)
 
     def callIntegral(self, t):
         """
-        Integral of excitation function
+        Integral of excitation function up to time `t`
+
+        Arguments:
+        ----------
+        t : torch.Tensor
+            Query time
         """
         return 1 - torch.exp(- self.decay * t)
 
@@ -113,8 +135,7 @@ class MixtureGaussianFilter(Excitation):
             The number of basis functions
         sigma = 1 / w_0
         """
-        super(MixtureGaussianFilter, self).__init__(cut_off)
-        self.M = M
+        super(MixtureGaussianFilter, self).__init__(M=M, cut_off=cut_off)
         self.t_m = torch.arange(0, self.M, dtype=torch.float64) * end_time / self.M
         self.sigma = end_time / (M * math.pi)
         self.GaussianFs = [GaussianFilter(t, self.sigma, cut_off) for t in self.t_m]
@@ -130,3 +151,18 @@ class MixtureGaussianFilter(Excitation):
         Integral of excitation function
         """
         return torch.stack([GaussianF.callIntegral(t) for GaussianF in self.GaussianFs])
+
+
+class TimeFunctionExcitation(Excitation):
+
+    def __init__(self, time_func):
+        self.time_func = time_func
+        self.bounds = (time_func.t_values[0], time_func.t_values[-1])
+        self.integrated_time_func = compute_integrated_time_func(time_func)
+        super().__init__(M=1, cut_off=self.bounds[1])
+
+    def call(self, t):
+        return torch.Tensor(self.time_func(t.numpy()))
+
+    def callIntegral(self, t):
+        return torch.Tensor(self.integrated_time_func(t.numpy()))

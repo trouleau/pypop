@@ -1,5 +1,6 @@
 import numpy as np
 import scipy
+import sklearn.metrics
 
 
 def edge_error(adj_excit_test, adj_excit_true, delta_t, n_nodes):
@@ -200,3 +201,31 @@ def relerr(adj_test, adj_true, norm=True, null_norm='min'):
     except Exception:
         rel_err = np.nan
     return rel_err / n_nodes
+
+
+def roc_auc(adj_test, adj_true, thresh_range=None):
+    if thresh_range is None:
+        thresh_range = np.linspace(0.0, adj_true.max() + 1e-5, num=500)
+    adj_test = adj_test.ravel()
+    adj_true = adj_true.ravel()
+    pre_arr = np.zeros_like(thresh_range)
+    rec_arr = np.zeros_like(thresh_range)
+    for i, thresh in enumerate(thresh_range):
+        pre_arr[i] = precision(adj_test=adj_test, adj_true=adj_true, threshold=thresh)
+        rec_arr[i] = recall(adj_test=adj_test, adj_true=adj_true, threshold=thresh)
+    auc = sklearn.metrics.auc(rec_arr, pre_arr)
+    return auc
+
+
+def pr_auc(adj_test, adj_true, thresh_range=None):
+    if thresh_range is None:
+        thresh_range = np.linspace(-1e-5, adj_true.max() + 1e-5, num=500)
+    adj_test = adj_test.ravel()
+    adj_true = adj_true.ravel()
+    tpr_arr = np.zeros_like(thresh_range)
+    fpr_arr = np.zeros_like(thresh_range)
+    for i, thresh in enumerate(thresh_range):
+        tpr_arr[i] = tpr(adj_test=adj_test, adj_true=adj_true, threshold=thresh)
+        fpr_arr[i] = fpr(adj_test=adj_test, adj_true=adj_true, threshold=thresh)
+    auc = sklearn.metrics.auc(fpr_arr, tpr_arr)
+    return auc

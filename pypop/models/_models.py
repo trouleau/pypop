@@ -22,7 +22,7 @@ class Model(metaclass=abc.ABCMeta):
         self.n_jumps = None     # Total Number of jumps observed
         self.dim = None         # Number of dimensions
         self.n_params = None    # Number of parameters
-        self._fitted = False    # Indicate if data is properly set
+        self._observed = False  # Indicate if data is properly set
 
     def observe(self, events, end_time=None):
         """
