@@ -6,7 +6,7 @@
         "depends": [],
         "name": "pypop.models.hawkes._cumulant_computer.cumulant_computer",
         "sources": [
-            "cumulant_computer.pyx"
+            "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx"
         ]
     },
     "module_name": "pypop.models.hawkes._cumulant_computer.cumulant_computer"
@@ -851,7 +851,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "cumulant_computer.pyx",
+  "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx",
   "__init__.pxd",
   "stringsource",
   "type.pxd",
@@ -965,7 +965,7 @@ typedef volatile __pyx_atomic_int_type __pyx_atomic_int;
 #define __Pyx_FastGilFuncInit()
 
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":775
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":775
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -974,7 +974,7 @@ typedef volatile __pyx_atomic_int_type __pyx_atomic_int;
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":776
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":776
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -983,7 +983,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":777
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":777
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -992,7 +992,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":778
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":778
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1001,7 +1001,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":782
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":782
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1010,7 +1010,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":783
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":783
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1019,7 +1019,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":784
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":784
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1028,7 +1028,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":785
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":785
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1037,7 +1037,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":789
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":789
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1046,7 +1046,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":790
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":790
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1055,7 +1055,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":799
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":799
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -1064,7 +1064,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":800
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":800
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -1073,7 +1073,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":801
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":801
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1082,7 +1082,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":803
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":803
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1091,7 +1091,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":804
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":804
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -1100,7 +1100,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":805
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":805
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1109,7 +1109,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":807
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":807
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1118,7 +1118,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":808
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":808
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1127,7 +1127,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":810
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":810
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1136,7 +1136,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":811
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":811
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1145,7 +1145,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":812
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":812
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1193,7 +1193,7 @@ struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
 struct __pyx_memoryviewslice_obj;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":814
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":814
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1202,7 +1202,7 @@ struct __pyx_memoryviewslice_obj;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":815
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":815
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1211,7 +1211,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":816
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":816
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1220,7 +1220,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":818
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":818
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -2214,7 +2214,6 @@ int __pyx_module_is_main_pypop__models__hawkes___cumulant_computer__cumulant_com
 
 /* Implementation of 'pypop.models.hawkes._cumulant_computer.cumulant_computer' */
 static PyObject *__pyx_builtin_range;
-static PyObject *__pyx_builtin_print;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_RuntimeError;
 static PyObject *__pyx_builtin_ImportError;
@@ -2268,7 +2267,6 @@ static const char __pyx_k_flags[] = "flags";
 static const char __pyx_k_kc_ij[] = "kc_ij";
 static const char __pyx_k_nreal[] = "nreal";
 static const char __pyx_k_numpy[] = "numpy";
-static const char __pyx_k_print[] = "print";
 static const char __pyx_k_range[] = "range";
 static const char __pyx_k_res_C[] = "res_C";
 static const char __pyx_k_shape[] = "shape";
@@ -2354,7 +2352,6 @@ static const char __pyx_k_events_k_in_interval[] = "events_k_in_interval";
 static const char __pyx_k_strided_and_indirect[] = "<strided and indirect>";
 static const char __pyx_k_compute_covariance_ij[] = "_compute_covariance_ij";
 static const char __pyx_k_contiguous_and_direct[] = "<contiguous and direct>";
-static const char __pyx_k_cumulant_computer_pyx[] = "cumulant_computer.pyx";
 static const char __pyx_k_MemoryView_of_r_object[] = "<MemoryView of %r object>";
 static const char __pyx_k_MemoryView_of_r_at_0x_x[] = "<MemoryView of %r at 0x%x>";
 static const char __pyx_k_contiguous_and_indirect[] = "<contiguous and indirect>";
@@ -2384,9 +2381,10 @@ static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing ex
 static const char __pyx_k_ndarray_is_not_Fortran_contiguou[] = "ndarray is not Fortran contiguous";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
-static const char __pyx_k_pypop_models_hawkes__cumulant_co[] = "pypop.models.hawkes._cumulant_computer.cumulant_computer";
+static const char __pyx_k_pypop_models_hawkes__cumulant_co[] = "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx";
 static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to allocate shape and strides.";
 static const char __pyx_k_Format_string_allocated_too_shor_2[] = "Format string allocated too short.";
+static const char __pyx_k_pypop_models_hawkes__cumulant_co_2[] = "pypop.models.hawkes._cumulant_computer.cumulant_computer";
 static PyObject *__pyx_n_s_ASCII;
 static PyObject *__pyx_kp_s_Buffer_view_does_not_expose_stri;
 static PyObject *__pyx_n_s_C;
@@ -2440,7 +2438,6 @@ static PyObject *__pyx_n_s_compute_skewness_all;
 static PyObject *__pyx_n_s_compute_skewness_ijk;
 static PyObject *__pyx_kp_s_contiguous_and_direct;
 static PyObject *__pyx_kp_s_contiguous_and_indirect;
-static PyObject *__pyx_kp_s_cumulant_computer_pyx;
 static PyObject *__pyx_n_s_d_ijk;
 static PyObject *__pyx_n_s_dict;
 static PyObject *__pyx_n_s_dim;
@@ -2506,8 +2503,8 @@ static PyObject *__pyx_kp_u_numpy_core_umath_failed_to_impor;
 static PyObject *__pyx_n_s_obj;
 static PyObject *__pyx_n_s_pack;
 static PyObject *__pyx_n_s_pickle;
-static PyObject *__pyx_n_s_print;
-static PyObject *__pyx_n_s_pypop_models_hawkes__cumulant_co;
+static PyObject *__pyx_kp_s_pypop_models_hawkes__cumulant_co;
+static PyObject *__pyx_n_s_pypop_models_hawkes__cumulant_co_2;
 static PyObject *__pyx_n_s_pyx_PickleError;
 static PyObject *__pyx_n_s_pyx_checksum;
 static PyObject *__pyx_n_s_pyx_getbuffer;
@@ -5217,7 +5214,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  * 
  *     Kc = np.zeros((dim, dim))             # <<<<<<<<<<<<<<
  * 
- *     print(Kc)
+ *     for r in range(nreal):
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -5261,20 +5258,6 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":271
  *     Kc = np.zeros((dim, dim))
  * 
- *     print(Kc)             # <<<<<<<<<<<<<<
- * 
- *     for r in range(nreal):
- */
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_Kc, 2, (PyObject *(*)(char *)) __pyx_memview_get_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, (int (*)(char *, PyObject *)) __pyx_memview_set_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 271, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":273
- *     print(Kc)
- * 
  *     for r in range(nreal):             # <<<<<<<<<<<<<<
  *         for i in range(dim):
  *             for j in range(dim):
@@ -5284,7 +5267,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v_r = __pyx_t_10;
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":274
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":272
  * 
  *     for r in range(nreal):
  *         for i in range(dim):             # <<<<<<<<<<<<<<
@@ -5296,7 +5279,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
       __pyx_v_i = __pyx_t_13;
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":275
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":273
  *     for r in range(nreal):
  *         for i in range(dim):
  *             for j in range(dim):             # <<<<<<<<<<<<<<
@@ -5308,31 +5291,31 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
       for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
         __pyx_v_j = __pyx_t_16;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":276
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":274
  *         for i in range(dim):
  *             for j in range(dim):
  *                 kc_ij = compute_skewness_ijk(             # <<<<<<<<<<<<<<
  *                     integration_support=integration_support,
  *                     end_time=end_times[r],
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_compute_skewness_ijk); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 276, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_4);
+        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_compute_skewness_ijk); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 274, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":277
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":275
  *             for j in range(dim):
  *                 kc_ij = compute_skewness_ijk(
  *                     integration_support=integration_support,             # <<<<<<<<<<<<<<
  *                     end_time=end_times[r],
  *                     mean_intensity_i=mean_intensity[i],
  */
-        __pyx_t_2 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 277, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_6 = PyFloat_FromDouble(__pyx_v_integration_support); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 277, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 275, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_4);
+        __pyx_t_6 = PyFloat_FromDouble(__pyx_v_integration_support); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 275, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_integration_support, __pyx_t_6) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
+        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_integration_support, __pyx_t_6) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":278
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":276
  *                 kc_ij = compute_skewness_ijk(
  *                     integration_support=integration_support,
  *                     end_time=end_times[r],             # <<<<<<<<<<<<<<
@@ -5341,11 +5324,11 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
         if (unlikely(__pyx_v_end_times == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 278, __pyx_L1_error)
+          __PYX_ERR(0, 276, __pyx_L1_error)
         }
-        if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_end_time, PyList_GET_ITEM(__pyx_v_end_times, __pyx_v_r)) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
+        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_end_time, PyList_GET_ITEM(__pyx_v_end_times, __pyx_v_r)) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":279
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":277
  *                     integration_support=integration_support,
  *                     end_time=end_times[r],
  *                     mean_intensity_i=mean_intensity[i],             # <<<<<<<<<<<<<<
@@ -5353,12 +5336,12 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  *                     mean_intensity_k=mean_intensity[j],
  */
         __pyx_t_17 = __pyx_v_i;
-        __pyx_t_6 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 279, __pyx_L1_error)
+        __pyx_t_6 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 277, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_mean_intensity_i, __pyx_t_6) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
+        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_mean_intensity_i, __pyx_t_6) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":280
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":278
  *                     end_time=end_times[r],
  *                     mean_intensity_i=mean_intensity[i],
  *                     mean_intensity_j=mean_intensity[i],             # <<<<<<<<<<<<<<
@@ -5366,12 +5349,12 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  *                     events_i=multi_events[r][i],
  */
         __pyx_t_17 = __pyx_v_i;
-        __pyx_t_6 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 280, __pyx_L1_error)
+        __pyx_t_6 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 278, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_mean_intensity_j, __pyx_t_6) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
+        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_mean_intensity_j, __pyx_t_6) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":281
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":279
  *                     mean_intensity_i=mean_intensity[i],
  *                     mean_intensity_j=mean_intensity[i],
  *                     mean_intensity_k=mean_intensity[j],             # <<<<<<<<<<<<<<
@@ -5379,12 +5362,12 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  *                     events_j=multi_events[r][i],
  */
         __pyx_t_17 = __pyx_v_j;
-        __pyx_t_6 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 281, __pyx_L1_error)
+        __pyx_t_6 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 279, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_mean_intensity_k, __pyx_t_6) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
+        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_mean_intensity_k, __pyx_t_6) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":282
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":280
  *                     mean_intensity_j=mean_intensity[i],
  *                     mean_intensity_k=mean_intensity[j],
  *                     events_i=multi_events[r][i],             # <<<<<<<<<<<<<<
@@ -5393,14 +5376,14 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
         if (unlikely(__pyx_v_multi_events == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 282, __pyx_L1_error)
+          __PYX_ERR(0, 280, __pyx_L1_error)
         }
-        __pyx_t_6 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 282, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 280, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_events_i, __pyx_t_6) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
+        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_events_i, __pyx_t_6) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":283
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":281
  *                     mean_intensity_k=mean_intensity[j],
  *                     events_i=multi_events[r][i],
  *                     events_j=multi_events[r][i],             # <<<<<<<<<<<<<<
@@ -5409,14 +5392,14 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
         if (unlikely(__pyx_v_multi_events == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 283, __pyx_L1_error)
+          __PYX_ERR(0, 281, __pyx_L1_error)
         }
-        __pyx_t_6 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 283, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 281, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_events_j, __pyx_t_6) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
+        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_events_j, __pyx_t_6) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":284
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":282
  *                     events_i=multi_events[r][i],
  *                     events_j=multi_events[r][i],
  *                     events_k=multi_events[r][j])             # <<<<<<<<<<<<<<
@@ -5425,41 +5408,41 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
         if (unlikely(__pyx_v_multi_events == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 284, __pyx_L1_error)
+          __PYX_ERR(0, 282, __pyx_L1_error)
         }
-        __pyx_t_6 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 284, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 282, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_events_k, __pyx_t_6) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
+        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_events_k, __pyx_t_6) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":276
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":274
  *         for i in range(dim):
  *             for j in range(dim):
  *                 kc_ij = compute_skewness_ijk(             # <<<<<<<<<<<<<<
  *                     integration_support=integration_support,
  *                     end_time=end_times[r],
  */
-        __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 276, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 274, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_XDECREF_SET(__pyx_v_kc_ij, __pyx_t_6);
         __pyx_t_6 = 0;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":285
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":283
  *                     events_j=multi_events[r][i],
  *                     events_k=multi_events[r][j])
  *                 Kc[i, j] += kc_ij / nreal             # <<<<<<<<<<<<<<
  *     return Kc
  * 
  */
-        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_nreal); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 285, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_nreal); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 283, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_v_kc_ij, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 285, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
+        __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_v_kc_ij, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 283, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_18 == ((npy_double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 285, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_18 == ((npy_double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 283, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __pyx_t_17 = __pyx_v_i;
         __pyx_t_19 = __pyx_v_j;
         *((__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_Kc.data + __pyx_t_17 * __pyx_v_Kc.strides[0]) ) + __pyx_t_19 * __pyx_v_Kc.strides[1]) )) += __pyx_t_18;
@@ -5467,7 +5450,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     }
   }
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":286
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":284
  *                     events_k=multi_events[r][j])
  *                 Kc[i, j] += kc_ij / nreal
  *     return Kc             # <<<<<<<<<<<<<<
@@ -5475,10 +5458,10 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_Kc, 2, (PyObject *(*)(char *)) __pyx_memview_get_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, (int (*)(char *, PyObject *)) __pyx_memview_set_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_r = __pyx_t_2;
-  __pyx_t_2 = 0;
+  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_v_Kc, 2, (PyObject *(*)(char *)) __pyx_memview_get_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, (int (*)(char *, PyObject *)) __pyx_memview_set_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 284, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_r = __pyx_t_4;
+  __pyx_t_4 = 0;
   goto __pyx_L0;
 
   /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":260
@@ -5516,7 +5499,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   return __pyx_r;
 }
 
-/* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":289
+/* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":287
  * 
  * 
  * def compute_skewness_all(double integration_support, list end_times,             # <<<<<<<<<<<<<<
@@ -5565,23 +5548,23 @@ static PyObject *__pyx_pw_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_end_times)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_skewness_all", 1, 4, 4, 1); __PYX_ERR(0, 289, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_skewness_all", 1, 4, 4, 1); __PYX_ERR(0, 287, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_mean_intensity)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_skewness_all", 1, 4, 4, 2); __PYX_ERR(0, 289, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_skewness_all", 1, 4, 4, 2); __PYX_ERR(0, 287, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_multi_events)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_skewness_all", 1, 4, 4, 3); __PYX_ERR(0, 289, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_skewness_all", 1, 4, 4, 3); __PYX_ERR(0, 287, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "compute_skewness_all") < 0)) __PYX_ERR(0, 289, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "compute_skewness_all") < 0)) __PYX_ERR(0, 287, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -5591,22 +5574,22 @@ static PyObject *__pyx_pw_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
     }
-    __pyx_v_integration_support = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_integration_support == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 289, __pyx_L3_error)
+    __pyx_v_integration_support = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_integration_support == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 287, __pyx_L3_error)
     __pyx_v_end_times = ((PyObject*)values[1]);
     __pyx_v_mean_intensity = ((PyArrayObject *)values[2]);
     __pyx_v_multi_events = ((PyObject*)values[3]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("compute_skewness_all", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 289, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("compute_skewness_all", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 287, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pypop.models.hawkes._cumulant_computer.cumulant_computer.compute_skewness_all", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_end_times), (&PyList_Type), 1, "end_times", 1))) __PYX_ERR(0, 289, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_mean_intensity), __pyx_ptype_5numpy_ndarray, 1, "mean_intensity", 0))) __PYX_ERR(0, 290, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_multi_events), (&PyList_Type), 1, "multi_events", 1))) __PYX_ERR(0, 291, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_end_times), (&PyList_Type), 1, "end_times", 1))) __PYX_ERR(0, 287, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_mean_intensity), __pyx_ptype_5numpy_ndarray, 1, "mean_intensity", 0))) __PYX_ERR(0, 288, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_multi_events), (&PyList_Type), 1, "multi_events", 1))) __PYX_ERR(0, 289, __pyx_L1_error)
   __pyx_r = __pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_8compute_skewness_all(__pyx_self, __pyx_v_integration_support, __pyx_v_end_times, __pyx_v_mean_intensity, __pyx_v_multi_events);
 
   /* function exit code */
@@ -5665,11 +5648,11 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   __pyx_pybuffernd_mean_intensity.rcbuffer = &__pyx_pybuffer_mean_intensity;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer, (PyObject*)__pyx_v_mean_intensity, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer, (PyObject*)__pyx_v_mean_intensity, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 287, __pyx_L1_error)
   }
   __pyx_pybuffernd_mean_intensity.diminfo[0].strides = __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_mean_intensity.diminfo[0].shape = __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.shape[0];
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":294
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":292
  *     cdef:
  *         int r, i, j, k
  *         int nreal = len(multi_events)             # <<<<<<<<<<<<<<
@@ -5678,12 +5661,12 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   if (unlikely(__pyx_v_multi_events == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 294, __pyx_L1_error)
+    __PYX_ERR(0, 292, __pyx_L1_error)
   }
-  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_multi_events); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 294, __pyx_L1_error)
+  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_multi_events); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 292, __pyx_L1_error)
   __pyx_v_nreal = __pyx_t_1;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":295
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":293
  *         int r, i, j, k
  *         int nreal = len(multi_events)
  *         int dim = len(multi_events[0])             # <<<<<<<<<<<<<<
@@ -5692,33 +5675,33 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   if (unlikely(__pyx_v_multi_events == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 295, __pyx_L1_error)
+    __PYX_ERR(0, 293, __pyx_L1_error)
   }
   __pyx_t_2 = PyList_GET_ITEM(__pyx_v_multi_events, 0);
   __Pyx_INCREF(__pyx_t_2);
-  __pyx_t_1 = PyObject_Length(__pyx_t_2); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 295, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_t_2); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 293, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_dim = __pyx_t_1;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":299
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":297
  *         DTYPE_d_t[:, :, :] D
  * 
  *     D = np.zeros((dim, dim, dim))             # <<<<<<<<<<<<<<
  * 
  *     for r in range(nreal):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_3);
@@ -5742,16 +5725,16 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   __pyx_t_2 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_6, __pyx_t_7) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7);
   __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 299, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t(__pyx_t_2, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t(__pyx_t_2, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_D = __pyx_t_8;
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":301
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":299
  *     D = np.zeros((dim, dim, dim))
  * 
  *     for r in range(nreal):             # <<<<<<<<<<<<<<
@@ -5763,7 +5746,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v_r = __pyx_t_11;
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":302
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":300
  * 
  *     for r in range(nreal):
  *         for i in range(dim):             # <<<<<<<<<<<<<<
@@ -5775,7 +5758,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_13; __pyx_t_14+=1) {
       __pyx_v_i = __pyx_t_14;
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":303
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":301
  *     for r in range(nreal):
  *         for i in range(dim):
  *             for j in range(dim):             # <<<<<<<<<<<<<<
@@ -5787,7 +5770,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
       for (__pyx_t_17 = 0; __pyx_t_17 < __pyx_t_16; __pyx_t_17+=1) {
         __pyx_v_j = __pyx_t_17;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":304
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":302
  *         for i in range(dim):
  *             for j in range(dim):
  *                 for k in range(dim):             # <<<<<<<<<<<<<<
@@ -5799,31 +5782,31 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
         for (__pyx_t_20 = 0; __pyx_t_20 < __pyx_t_19; __pyx_t_20+=1) {
           __pyx_v_k = __pyx_t_20;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":305
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":303
  *             for j in range(dim):
  *                 for k in range(dim):
  *                     d_ijk = compute_skewness_ijk(             # <<<<<<<<<<<<<<
  *                         integration_support=integration_support,
  *                         end_time=end_times[r],
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_compute_skewness_ijk); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 305, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_compute_skewness_ijk); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":306
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":304
  *                 for k in range(dim):
  *                     d_ijk = compute_skewness_ijk(
  *                         integration_support=integration_support,             # <<<<<<<<<<<<<<
  *                         end_time=end_times[r],
  *                         mean_intensity_i=mean_intensity[i],
  */
-          __pyx_t_4 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 306, __pyx_L1_error)
+          __pyx_t_4 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 304, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_7 = PyFloat_FromDouble(__pyx_v_integration_support); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 306, __pyx_L1_error)
+          __pyx_t_7 = PyFloat_FromDouble(__pyx_v_integration_support); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 304, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
-          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_integration_support, __pyx_t_7) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
+          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_integration_support, __pyx_t_7) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":307
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":305
  *                     d_ijk = compute_skewness_ijk(
  *                         integration_support=integration_support,
  *                         end_time=end_times[r],             # <<<<<<<<<<<<<<
@@ -5832,11 +5815,11 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
           if (unlikely(__pyx_v_end_times == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 307, __pyx_L1_error)
+            __PYX_ERR(0, 305, __pyx_L1_error)
           }
-          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_end_time, PyList_GET_ITEM(__pyx_v_end_times, __pyx_v_r)) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
+          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_end_time, PyList_GET_ITEM(__pyx_v_end_times, __pyx_v_r)) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":308
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":306
  *                         integration_support=integration_support,
  *                         end_time=end_times[r],
  *                         mean_intensity_i=mean_intensity[i],             # <<<<<<<<<<<<<<
@@ -5844,12 +5827,12 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  *                         mean_intensity_k=mean_intensity[k],
  */
           __pyx_t_21 = __pyx_v_i;
-          __pyx_t_7 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 308, __pyx_L1_error)
+          __pyx_t_7 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 306, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
-          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_mean_intensity_i, __pyx_t_7) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
+          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_mean_intensity_i, __pyx_t_7) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":309
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":307
  *                         end_time=end_times[r],
  *                         mean_intensity_i=mean_intensity[i],
  *                         mean_intensity_j=mean_intensity[j],             # <<<<<<<<<<<<<<
@@ -5857,12 +5840,12 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  *                         events_i=multi_events[r][i],
  */
           __pyx_t_21 = __pyx_v_j;
-          __pyx_t_7 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 309, __pyx_L1_error)
+          __pyx_t_7 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 307, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
-          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_mean_intensity_j, __pyx_t_7) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
+          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_mean_intensity_j, __pyx_t_7) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":310
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":308
  *                         mean_intensity_i=mean_intensity[i],
  *                         mean_intensity_j=mean_intensity[j],
  *                         mean_intensity_k=mean_intensity[k],             # <<<<<<<<<<<<<<
@@ -5870,12 +5853,12 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  *                         events_j=multi_events[r][j],
  */
           __pyx_t_21 = __pyx_v_k;
-          __pyx_t_7 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 310, __pyx_L1_error)
+          __pyx_t_7 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_mean_intensity.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_mean_intensity.diminfo[0].strides))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 308, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
-          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_mean_intensity_k, __pyx_t_7) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
+          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_mean_intensity_k, __pyx_t_7) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":311
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":309
  *                         mean_intensity_j=mean_intensity[j],
  *                         mean_intensity_k=mean_intensity[k],
  *                         events_i=multi_events[r][i],             # <<<<<<<<<<<<<<
@@ -5884,14 +5867,14 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
           if (unlikely(__pyx_v_multi_events == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 311, __pyx_L1_error)
+            __PYX_ERR(0, 309, __pyx_L1_error)
           }
-          __pyx_t_7 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 311, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 309, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
-          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_events_i, __pyx_t_7) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
+          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_events_i, __pyx_t_7) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":312
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":310
  *                         mean_intensity_k=mean_intensity[k],
  *                         events_i=multi_events[r][i],
  *                         events_j=multi_events[r][j],             # <<<<<<<<<<<<<<
@@ -5900,14 +5883,14 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
           if (unlikely(__pyx_v_multi_events == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 312, __pyx_L1_error)
+            __PYX_ERR(0, 310, __pyx_L1_error)
           }
-          __pyx_t_7 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 312, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_j, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 310, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
-          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_events_j, __pyx_t_7) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
+          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_events_j, __pyx_t_7) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":313
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":311
  *                         events_i=multi_events[r][i],
  *                         events_j=multi_events[r][j],
  *                         events_k=multi_events[r][k])             # <<<<<<<<<<<<<<
@@ -5916,29 +5899,29 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
           if (unlikely(__pyx_v_multi_events == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 313, __pyx_L1_error)
+            __PYX_ERR(0, 311, __pyx_L1_error)
           }
-          __pyx_t_7 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_k, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 313, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_GetItemInt(PyList_GET_ITEM(__pyx_v_multi_events, __pyx_v_r), __pyx_v_k, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 311, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
-          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_events_k, __pyx_t_7) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
+          if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_events_k, __pyx_t_7) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":305
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":303
  *             for j in range(dim):
  *                 for k in range(dim):
  *                     d_ijk = compute_skewness_ijk(             # <<<<<<<<<<<<<<
  *                         integration_support=integration_support,
  *                         end_time=end_times[r],
  */
-          __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 305, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 303, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-          __pyx_t_22 = __pyx_PyFloat_AsDouble(__pyx_t_7); if (unlikely((__pyx_t_22 == ((npy_double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 305, __pyx_L1_error)
+          __pyx_t_22 = __pyx_PyFloat_AsDouble(__pyx_t_7); if (unlikely((__pyx_t_22 == ((npy_double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 303, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __pyx_v_d_ijk = __pyx_t_22;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":314
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":312
  *                         events_j=multi_events[r][j],
  *                         events_k=multi_events[r][k])
  *                     D[i, j, k] += d_ijk / nreal             # <<<<<<<<<<<<<<
@@ -5947,7 +5930,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
           if (unlikely(__pyx_v_nreal == 0)) {
             PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-            __PYX_ERR(0, 314, __pyx_L1_error)
+            __PYX_ERR(0, 312, __pyx_L1_error)
           }
           __pyx_t_21 = __pyx_v_i;
           __pyx_t_23 = __pyx_v_j;
@@ -5958,7 +5941,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     }
   }
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":315
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":313
  *                         events_k=multi_events[r][k])
  *                     D[i, j, k] += d_ijk / nreal
  *     return D             # <<<<<<<<<<<<<<
@@ -5966,13 +5949,13 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_7 = __pyx_memoryview_fromslice(__pyx_v_D, 3, (PyObject *(*)(char *)) __pyx_memview_get_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, (int (*)(char *, PyObject *)) __pyx_memview_set_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, 0);; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 315, __pyx_L1_error)
+  __pyx_t_7 = __pyx_memoryview_fromslice(__pyx_v_D, 3, (PyObject *(*)(char *)) __pyx_memview_get_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, (int (*)(char *, PyObject *)) __pyx_memview_set_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, 0);; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 313, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_r = __pyx_t_7;
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":289
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":287
  * 
  * 
  * def compute_skewness_all(double integration_support, list end_times,             # <<<<<<<<<<<<<<
@@ -6007,7 +5990,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   return __pyx_r;
 }
 
-/* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":318
+/* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":316
  * 
  * 
  * def compute_ground_truth_skewness(np.ndarray[DTYPE_d_t, ndim=1] L_vec,             # <<<<<<<<<<<<<<
@@ -6053,17 +6036,17 @@ static PyObject *__pyx_pw_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_C)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_ground_truth_skewness", 1, 3, 3, 1); __PYX_ERR(0, 318, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_ground_truth_skewness", 1, 3, 3, 1); __PYX_ERR(0, 316, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_R)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_ground_truth_skewness", 1, 3, 3, 2); __PYX_ERR(0, 318, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_ground_truth_skewness", 1, 3, 3, 2); __PYX_ERR(0, 316, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "compute_ground_truth_skewness") < 0)) __PYX_ERR(0, 318, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "compute_ground_truth_skewness") < 0)) __PYX_ERR(0, 316, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -6078,15 +6061,15 @@ static PyObject *__pyx_pw_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("compute_ground_truth_skewness", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 318, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("compute_ground_truth_skewness", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 316, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pypop.models.hawkes._cumulant_computer.cumulant_computer.compute_ground_truth_skewness", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_L_vec), __pyx_ptype_5numpy_ndarray, 1, "L_vec", 0))) __PYX_ERR(0, 318, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_C), __pyx_ptype_5numpy_ndarray, 1, "C", 0))) __PYX_ERR(0, 319, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_R), __pyx_ptype_5numpy_ndarray, 1, "R", 0))) __PYX_ERR(0, 320, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_L_vec), __pyx_ptype_5numpy_ndarray, 1, "L_vec", 0))) __PYX_ERR(0, 316, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_C), __pyx_ptype_5numpy_ndarray, 1, "C", 0))) __PYX_ERR(0, 317, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_R), __pyx_ptype_5numpy_ndarray, 1, "R", 0))) __PYX_ERR(0, 318, __pyx_L1_error)
   __pyx_r = __pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_10compute_ground_truth_skewness(__pyx_self, __pyx_v_L_vec, __pyx_v_C, __pyx_v_R);
 
   /* function exit code */
@@ -6123,11 +6106,11 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   int __pyx_t_8;
   int __pyx_t_9;
   int __pyx_t_10;
-  int __pyx_t_11;
-  int __pyx_t_12;
+  long __pyx_t_11;
+  long __pyx_t_12;
   int __pyx_t_13;
-  int __pyx_t_14;
-  int __pyx_t_15;
+  long __pyx_t_14;
+  long __pyx_t_15;
   int __pyx_t_16;
   int __pyx_t_17;
   int __pyx_t_18;
@@ -6178,21 +6161,21 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   __pyx_pybuffernd_R.rcbuffer = &__pyx_pybuffer_R;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_L_vec.rcbuffer->pybuffer, (PyObject*)__pyx_v_L_vec, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 318, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_L_vec.rcbuffer->pybuffer, (PyObject*)__pyx_v_L_vec, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 316, __pyx_L1_error)
   }
   __pyx_pybuffernd_L_vec.diminfo[0].strides = __pyx_pybuffernd_L_vec.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_L_vec.diminfo[0].shape = __pyx_pybuffernd_L_vec.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_C.rcbuffer->pybuffer, (PyObject*)__pyx_v_C, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 318, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_C.rcbuffer->pybuffer, (PyObject*)__pyx_v_C, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 316, __pyx_L1_error)
   }
   __pyx_pybuffernd_C.diminfo[0].strides = __pyx_pybuffernd_C.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_C.diminfo[0].shape = __pyx_pybuffernd_C.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_C.diminfo[1].strides = __pyx_pybuffernd_C.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_C.diminfo[1].shape = __pyx_pybuffernd_C.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_R.rcbuffer->pybuffer, (PyObject*)__pyx_v_R, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 318, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_R.rcbuffer->pybuffer, (PyObject*)__pyx_v_R, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 316, __pyx_L1_error)
   }
   __pyx_pybuffernd_R.diminfo[0].strides = __pyx_pybuffernd_R.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_R.diminfo[0].shape = __pyx_pybuffernd_R.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_R.diminfo[1].strides = __pyx_pybuffernd_R.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_R.diminfo[1].shape = __pyx_pybuffernd_R.rcbuffer->pybuffer.shape[1];
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":323
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":321
  *     cdef:
  *         int i, j, k, m
  *         int dim = L_vec.shape[0]             # <<<<<<<<<<<<<<
@@ -6201,25 +6184,25 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   __pyx_v_dim = (__pyx_v_L_vec->dimensions[0]);
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":326
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":324
  *         DTYPE_d_t[:, :, :] D
  * 
  *     D = np.zeros((dim, dim, dim))             # <<<<<<<<<<<<<<
  * 
  *     for i in range(dim):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_2);
@@ -6243,54 +6226,54 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_5, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_6);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 326, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_D = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":328
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":326
  *     D = np.zeros((dim, dim, dim))
  * 
  *     for i in range(dim):             # <<<<<<<<<<<<<<
- *         for j in range(dim):
- *             for k in range(dim):
+ *         for j in range(i+1):
+ *             for k in range(j+1):
  */
   __pyx_t_8 = __pyx_v_dim;
   __pyx_t_9 = __pyx_t_8;
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v_i = __pyx_t_10;
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":329
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":327
  * 
  *     for i in range(dim):
- *         for j in range(dim):             # <<<<<<<<<<<<<<
- *             for k in range(dim):
+ *         for j in range(i+1):             # <<<<<<<<<<<<<<
+ *             for k in range(j+1):
  *                 for m in range(dim):
  */
-    __pyx_t_11 = __pyx_v_dim;
+    __pyx_t_11 = (__pyx_v_i + 1);
     __pyx_t_12 = __pyx_t_11;
     for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
       __pyx_v_j = __pyx_t_13;
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":330
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":328
  *     for i in range(dim):
- *         for j in range(dim):
- *             for k in range(dim):             # <<<<<<<<<<<<<<
+ *         for j in range(i+1):
+ *             for k in range(j+1):             # <<<<<<<<<<<<<<
  *                 for m in range(dim):
  *                     D[i, j, k] += (R[i, m] * R[j, m] * C[k, m] +
  */
-      __pyx_t_14 = __pyx_v_dim;
+      __pyx_t_14 = (__pyx_v_j + 1);
       __pyx_t_15 = __pyx_t_14;
       for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
         __pyx_v_k = __pyx_t_16;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":331
- *         for j in range(dim):
- *             for k in range(dim):
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":329
+ *         for j in range(i+1):
+ *             for k in range(j+1):
  *                 for m in range(dim):             # <<<<<<<<<<<<<<
  *                     D[i, j, k] += (R[i, m] * R[j, m] * C[k, m] +
  *                                    R[i, m] * C[j, m] * R[k, m] +
@@ -6300,8 +6283,8 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
         for (__pyx_t_19 = 0; __pyx_t_19 < __pyx_t_18; __pyx_t_19+=1) {
           __pyx_v_m = __pyx_t_19;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":332
- *             for k in range(dim):
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":330
+ *             for k in range(j+1):
  *                 for m in range(dim):
  *                     D[i, j, k] += (R[i, m] * R[j, m] * C[k, m] +             # <<<<<<<<<<<<<<
  *                                    R[i, m] * C[j, m] * R[k, m] +
@@ -6314,7 +6297,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
           __pyx_t_24 = __pyx_v_k;
           __pyx_t_25 = __pyx_v_m;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":333
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":331
  *                 for m in range(dim):
  *                     D[i, j, k] += (R[i, m] * R[j, m] * C[k, m] +
  *                                    R[i, m] * C[j, m] * R[k, m] +             # <<<<<<<<<<<<<<
@@ -6328,7 +6311,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
           __pyx_t_30 = __pyx_v_k;
           __pyx_t_31 = __pyx_v_m;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":334
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":332
  *                     D[i, j, k] += (R[i, m] * R[j, m] * C[k, m] +
  *                                    R[i, m] * C[j, m] * R[k, m] +
  *                                    C[i, m] * R[j, m] * R[k, m]             # <<<<<<<<<<<<<<
@@ -6342,7 +6325,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
           __pyx_t_36 = __pyx_v_k;
           __pyx_t_37 = __pyx_v_m;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":335
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":333
  *                                    R[i, m] * C[j, m] * R[k, m] +
  *                                    C[i, m] * R[j, m] * R[k, m]
  *                                    - 2 * L_vec[m] * R[i, m] * R[j, m] * R[k, m])             # <<<<<<<<<<<<<<
@@ -6357,8 +6340,8 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
           __pyx_t_43 = __pyx_v_k;
           __pyx_t_44 = __pyx_v_m;
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":332
- *             for k in range(dim):
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":330
+ *             for k in range(j+1):
  *                 for m in range(dim):
  *                     D[i, j, k] += (R[i, m] * R[j, m] * C[k, m] +             # <<<<<<<<<<<<<<
  *                                    R[i, m] * C[j, m] * R[k, m] +
@@ -6373,7 +6356,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     }
   }
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":336
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":334
  *                                    C[i, m] * R[j, m] * R[k, m]
  *                                    - 2 * L_vec[m] * R[i, m] * R[j, m] * R[k, m])
  *     return D             # <<<<<<<<<<<<<<
@@ -6381,13 +6364,13 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_D, 3, (PyObject *(*)(char *)) __pyx_memview_get_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, (int (*)(char *, PyObject *)) __pyx_memview_set_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_D, 3, (PyObject *(*)(char *)) __pyx_memview_get_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, (int (*)(char *, PyObject *)) __pyx_memview_set_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 334, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":318
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":316
  * 
  * 
  * def compute_ground_truth_skewness(np.ndarray[DTYPE_d_t, ndim=1] L_vec,             # <<<<<<<<<<<<<<
@@ -6426,7 +6409,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   return __pyx_r;
 }
 
-/* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":339
+/* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":337
  * 
  * 
  * def compute_covariance_ij_nphc(int r, int i, int j, double mean_intensity_j,             # <<<<<<<<<<<<<<
@@ -6487,47 +6470,47 @@ static PyObject *__pyx_pw_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_i)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 1); __PYX_ERR(0, 339, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 1); __PYX_ERR(0, 337, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_j)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 2); __PYX_ERR(0, 339, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 2); __PYX_ERR(0, 337, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_mean_intensity_j)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 3); __PYX_ERR(0, 339, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 3); __PYX_ERR(0, 337, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_integration_support)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 4); __PYX_ERR(0, 339, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 4); __PYX_ERR(0, 337, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_end_time_r)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 5); __PYX_ERR(0, 339, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 5); __PYX_ERR(0, 337, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_events_i)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 6); __PYX_ERR(0, 339, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 6); __PYX_ERR(0, 337, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
         if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_events_j)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 7); __PYX_ERR(0, 339, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, 7); __PYX_ERR(0, 337, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "compute_covariance_ij_nphc") < 0)) __PYX_ERR(0, 339, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "compute_covariance_ij_nphc") < 0)) __PYX_ERR(0, 337, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 8) {
       goto __pyx_L5_argtuple_error;
@@ -6541,25 +6524,25 @@ static PyObject *__pyx_pw_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
       values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
       values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
     }
-    __pyx_v_r = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_r == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 339, __pyx_L3_error)
-    __pyx_v_i = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_i == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 339, __pyx_L3_error)
-    __pyx_v_j = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_j == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 339, __pyx_L3_error)
-    __pyx_v_mean_intensity_j = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_mean_intensity_j == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 339, __pyx_L3_error)
-    __pyx_v_integration_support = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_integration_support == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 340, __pyx_L3_error)
-    __pyx_v_end_time_r = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_end_time_r == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 340, __pyx_L3_error)
+    __pyx_v_r = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_r == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 337, __pyx_L3_error)
+    __pyx_v_i = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_i == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 337, __pyx_L3_error)
+    __pyx_v_j = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_j == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 337, __pyx_L3_error)
+    __pyx_v_mean_intensity_j = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_mean_intensity_j == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 337, __pyx_L3_error)
+    __pyx_v_integration_support = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_integration_support == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 338, __pyx_L3_error)
+    __pyx_v_end_time_r = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_end_time_r == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 338, __pyx_L3_error)
     __pyx_v_events_i = ((PyArrayObject *)values[6]);
     __pyx_v_events_j = ((PyArrayObject *)values[7]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 339, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("compute_covariance_ij_nphc", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 337, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pypop.models.hawkes._cumulant_computer.cumulant_computer.compute_covariance_ij_nphc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_events_i), __pyx_ptype_5numpy_ndarray, 1, "events_i", 0))) __PYX_ERR(0, 341, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_events_j), __pyx_ptype_5numpy_ndarray, 1, "events_j", 0))) __PYX_ERR(0, 342, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_events_i), __pyx_ptype_5numpy_ndarray, 1, "events_i", 0))) __PYX_ERR(0, 339, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_events_j), __pyx_ptype_5numpy_ndarray, 1, "events_j", 0))) __PYX_ERR(0, 340, __pyx_L1_error)
   __pyx_r = __pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_12compute_covariance_ij_nphc(__pyx_self, __pyx_v_r, __pyx_v_i, __pyx_v_j, __pyx_v_mean_intensity_j, __pyx_v_integration_support, __pyx_v_end_time_r, __pyx_v_events_i, __pyx_v_events_j);
 
   /* function exit code */
@@ -6610,16 +6593,16 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   __pyx_pybuffernd_events_j.rcbuffer = &__pyx_pybuffer_events_j;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_events_i.rcbuffer->pybuffer, (PyObject*)__pyx_v_events_i, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 339, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_events_i.rcbuffer->pybuffer, (PyObject*)__pyx_v_events_i, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 337, __pyx_L1_error)
   }
   __pyx_pybuffernd_events_i.diminfo[0].strides = __pyx_pybuffernd_events_i.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_events_i.diminfo[0].shape = __pyx_pybuffernd_events_i.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_events_j.rcbuffer->pybuffer, (PyObject*)__pyx_v_events_j, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 339, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_events_j.rcbuffer->pybuffer, (PyObject*)__pyx_v_events_j, &__Pyx_TypeInfo_nn___pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 337, __pyx_L1_error)
   }
   __pyx_pybuffernd_events_j.diminfo[0].strides = __pyx_pybuffernd_events_j.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_events_j.diminfo[0].shape = __pyx_pybuffernd_events_j.rcbuffer->pybuffer.shape[0];
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":345
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":343
  *                           ):
  *     cdef:
  *         double res_C = 0.0             # <<<<<<<<<<<<<<
@@ -6628,7 +6611,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   __pyx_v_res_C = 0.0;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":346
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":344
  *     cdef:
  *         double res_C = 0.0
  *         double width = 2 * integration_support             # <<<<<<<<<<<<<<
@@ -6637,7 +6620,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   __pyx_v_width = (2.0 * __pyx_v_integration_support);
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":347
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":345
  *         double res_C = 0.0
  *         double width = 2 * integration_support
  *         double trend_C_j = width * mean_intensity_j             # <<<<<<<<<<<<<<
@@ -6646,7 +6629,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   __pyx_v_trend_C_j = (__pyx_v_width * __pyx_v_mean_intensity_j);
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":348
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":346
  *         double width = 2 * integration_support
  *         double trend_C_j = width * mean_intensity_j
  *         int n_i = events_i.shape[0]             # <<<<<<<<<<<<<<
@@ -6655,7 +6638,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   __pyx_v_n_i = (__pyx_v_events_i->dimensions[0]);
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":349
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":347
  *         double trend_C_j = width * mean_intensity_j
  *         int n_i = events_i.shape[0]
  *         int n_j = events_j.shape[0]             # <<<<<<<<<<<<<<
@@ -6664,7 +6647,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   __pyx_v_n_j = (__pyx_v_events_j->dimensions[0]);
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":350
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":348
  *         int n_i = events_i.shape[0]
  *         int n_j = events_j.shape[0]
  *         double t_k_i = 0.0             # <<<<<<<<<<<<<<
@@ -6673,7 +6656,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   __pyx_v_t_k_i = 0.0;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":351
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":349
  *         int n_j = events_j.shape[0]
  *         double t_k_i = 0.0
  *         double t_l_j = 0.0             # <<<<<<<<<<<<<<
@@ -6682,7 +6665,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   __pyx_v_t_l_j = 0.0;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":352
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":350
  *         double t_k_i = 0.0
  *         double t_l_j = 0.0
  *         int last_l = 0             # <<<<<<<<<<<<<<
@@ -6691,7 +6674,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   __pyx_v_last_l = 0;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":362
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":360
  *     # print('trend_C_j:', trend_C_j)
  * 
  *     for k in range(n_i):             # <<<<<<<<<<<<<<
@@ -6703,7 +6686,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_k = __pyx_t_3;
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":363
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":361
  * 
  *     for k in range(n_i):
  *         t_k_i = events_i[k]             # <<<<<<<<<<<<<<
@@ -6713,7 +6696,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     __pyx_t_4 = __pyx_v_k;
     __pyx_v_t_k_i = (*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_events_i.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_events_i.diminfo[0].strides));
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":364
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":362
  *     for k in range(n_i):
  *         t_k_i = events_i[k]
  *         if t_k_i - integration_support < 0:             # <<<<<<<<<<<<<<
@@ -6723,7 +6706,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     __pyx_t_5 = (((__pyx_v_t_k_i - __pyx_v_integration_support) < 0.0) != 0);
     if (__pyx_t_5) {
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":365
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":363
  *         t_k_i = events_i[k]
  *         if t_k_i - integration_support < 0:
  *             continue             # <<<<<<<<<<<<<<
@@ -6732,7 +6715,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
       goto __pyx_L3_continue;
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":364
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":362
  *     for k in range(n_i):
  *         t_k_i = events_i[k]
  *         if t_k_i - integration_support < 0:             # <<<<<<<<<<<<<<
@@ -6741,7 +6724,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
     }
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":369
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":367
  *         # print('------', 'k:', k, 't_k_i:', t_k_i)
  * 
  *         while last_l < n_j:             # <<<<<<<<<<<<<<
@@ -6752,7 +6735,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
       __pyx_t_5 = ((__pyx_v_last_l < __pyx_v_n_j) != 0);
       if (!__pyx_t_5) break;
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":370
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":368
  * 
  *         while last_l < n_j:
  *             if events_j[last_l] <= t_k_i - width:             # <<<<<<<<<<<<<<
@@ -6763,7 +6746,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
       __pyx_t_5 = (((*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_events_j.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_events_j.diminfo[0].strides)) <= (__pyx_v_t_k_i - __pyx_v_width)) != 0);
       if (__pyx_t_5) {
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":371
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":369
  *         while last_l < n_j:
  *             if events_j[last_l] <= t_k_i - width:
  *                 last_l += 1             # <<<<<<<<<<<<<<
@@ -6772,7 +6755,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
         __pyx_v_last_l = (__pyx_v_last_l + 1);
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":370
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":368
  * 
  *         while last_l < n_j:
  *             if events_j[last_l] <= t_k_i - width:             # <<<<<<<<<<<<<<
@@ -6782,7 +6765,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
         goto __pyx_L8;
       }
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":373
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":371
  *                 last_l += 1
  *             else:
  *                 break             # <<<<<<<<<<<<<<
@@ -6796,7 +6779,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     }
     __pyx_L7_break:;
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":377
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":375
  *         # print('    --', 'last_l', last_l)
  * 
  *         l = last_l             # <<<<<<<<<<<<<<
@@ -6805,7 +6788,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
     __pyx_v_l = __pyx_v_last_l;
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":378
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":376
  * 
  *         l = last_l
  *         events_in_interval = 0             # <<<<<<<<<<<<<<
@@ -6814,7 +6797,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
     __pyx_v_events_in_interval = 0;
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":379
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":377
  *         l = last_l
  *         events_in_interval = 0
  *         while l < n_j:             # <<<<<<<<<<<<<<
@@ -6825,7 +6808,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
       __pyx_t_5 = ((__pyx_v_l < __pyx_v_n_j) != 0);
       if (!__pyx_t_5) break;
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":380
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":378
  *         events_in_interval = 0
  *         while l < n_j:
  *             t_l_j = events_j[l]             # <<<<<<<<<<<<<<
@@ -6835,7 +6818,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
       __pyx_t_4 = __pyx_v_l;
       __pyx_v_t_l_j = (*__Pyx_BufPtrStrided1d(__pyx_t_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_DTYPE_d_t *, __pyx_pybuffernd_events_j.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_events_j.diminfo[0].strides));
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":382
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":380
  *             t_l_j = events_j[l]
  *             # print('    --', 'l:', l, 't_l_j:', t_l_j)
  *             abs_diff = abs(t_l_j - t_k_i)             # <<<<<<<<<<<<<<
@@ -6844,7 +6827,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
       __pyx_v_abs_diff = fabs((__pyx_v_t_l_j - __pyx_v_t_k_i));
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":383
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":381
  *             # print('    --', 'l:', l, 't_l_j:', t_l_j)
  *             abs_diff = abs(t_l_j - t_k_i)
  *             if abs_diff < width:             # <<<<<<<<<<<<<<
@@ -6854,7 +6837,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
       __pyx_t_5 = ((__pyx_v_abs_diff < __pyx_v_width) != 0);
       if (__pyx_t_5) {
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":384
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":382
  *             abs_diff = abs(t_l_j - t_k_i)
  *             if abs_diff < width:
  *                 if abs_diff < integration_support:             # <<<<<<<<<<<<<<
@@ -6864,7 +6847,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
         __pyx_t_5 = ((__pyx_v_abs_diff < __pyx_v_integration_support) != 0);
         if (__pyx_t_5) {
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":385
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":383
  *             if abs_diff < width:
  *                 if abs_diff < integration_support:
  *                     events_in_interval += 1             # <<<<<<<<<<<<<<
@@ -6873,7 +6856,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
           __pyx_v_events_in_interval = (__pyx_v_events_in_interval + 1);
 
-          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":384
+          /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":382
  *             abs_diff = abs(t_l_j - t_k_i)
  *             if abs_diff < width:
  *                 if abs_diff < integration_support:             # <<<<<<<<<<<<<<
@@ -6883,7 +6866,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
           goto __pyx_L12;
         }
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":389
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":387
  *                 else:
  *                     # print('    --', '   no go next')
  *                     pass             # <<<<<<<<<<<<<<
@@ -6894,7 +6877,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
         }
         __pyx_L12:;
 
-        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":383
+        /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":381
  *             # print('    --', 'l:', l, 't_l_j:', t_l_j)
  *             abs_diff = abs(t_l_j - t_k_i)
  *             if abs_diff < width:             # <<<<<<<<<<<<<<
@@ -6904,7 +6887,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
         goto __pyx_L11;
       }
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":392
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":390
  *             else:
  *                 # print('    --', '   no break:', 'abs_diff =', abs_diff, '>', width, '= width')
  *                 break             # <<<<<<<<<<<<<<
@@ -6916,7 +6899,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
       }
       __pyx_L11:;
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":393
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":391
  *                 # print('    --', '   no break:', 'abs_diff =', abs_diff, '>', width, '= width')
  *                 break
  *             l += 1             # <<<<<<<<<<<<<<
@@ -6927,7 +6910,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     }
     __pyx_L10_break:;
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":395
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":393
  *             l += 1
  * 
  *         if l == n_j:             # <<<<<<<<<<<<<<
@@ -6937,7 +6920,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     __pyx_t_5 = ((__pyx_v_l == __pyx_v_n_j) != 0);
     if (__pyx_t_5) {
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":397
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":395
  *         if l == n_j:
  *             # print('    --', 'l == n_j  --> ignore')
  *             continue             # <<<<<<<<<<<<<<
@@ -6946,7 +6929,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
       goto __pyx_L3_continue;
 
-      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":395
+      /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":393
  *             l += 1
  * 
  *         if l == n_j:             # <<<<<<<<<<<<<<
@@ -6955,7 +6938,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
     }
 
-    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":401
+    /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":399
  *         # print('    --', 'rec_C +=', events_in_interval, '-', trend_C_j)
  * 
  *         res_C += events_in_interval - trend_C_j             # <<<<<<<<<<<<<<
@@ -6966,7 +6949,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
     __pyx_L3_continue:;
   }
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":403
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":401
  *         res_C += events_in_interval - trend_C_j
  * 
  *     res_C /= end_time_r             # <<<<<<<<<<<<<<
@@ -6975,23 +6958,23 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
  */
   if (unlikely(__pyx_v_end_time_r == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 403, __pyx_L1_error)
+    __PYX_ERR(0, 401, __pyx_L1_error)
   }
   __pyx_v_res_C = (__pyx_v_res_C / __pyx_v_end_time_r);
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":405
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":403
  *     res_C /= end_time_r
  * 
  *     return res_C             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_res_C); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 405, __pyx_L1_error)
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_res_C); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 403, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_r = __pyx_t_6;
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":339
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":337
  * 
  * 
  * def compute_covariance_ij_nphc(int r, int i, int j, double mean_intensity_j,             # <<<<<<<<<<<<<<
@@ -7021,7 +7004,7 @@ static PyObject *__pyx_pf_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":258
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":258
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -7073,7 +7056,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_v_info->obj = Py_None; __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(__pyx_v_info->obj);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":265
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":265
  * 
  *             cdef int i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -7082,7 +7065,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_endian_detector = 1;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":266
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":266
  *             cdef int i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -7091,7 +7074,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":268
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":268
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
  * 
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -7100,7 +7083,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_ndim = PyArray_NDIM(__pyx_v_self);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":270
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":270
  *             ndim = PyArray_NDIM(self)
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -7114,7 +7097,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L4_bool_binop_done;
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":271
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":271
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -7125,7 +7108,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = __pyx_t_2;
   __pyx_L4_bool_binop_done:;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":270
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":270
  *             ndim = PyArray_NDIM(self)
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -7134,7 +7117,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   if (unlikely(__pyx_t_1)) {
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":272
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":272
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -7147,7 +7130,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(1, 272, __pyx_L1_error)
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":270
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":270
  *             ndim = PyArray_NDIM(self)
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -7156,7 +7139,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":274
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -7170,7 +7153,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L7_bool_binop_done;
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":275
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":275
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -7181,7 +7164,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = __pyx_t_2;
   __pyx_L7_bool_binop_done:;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":274
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -7190,7 +7173,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   if (unlikely(__pyx_t_1)) {
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":276
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":276
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -7203,7 +7186,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(1, 276, __pyx_L1_error)
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":274
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -7212,7 +7195,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":278
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":278
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
  * 
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
@@ -7221,7 +7204,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->buf = PyArray_DATA(__pyx_v_self);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":279
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":279
  * 
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
@@ -7230,7 +7213,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->ndim = __pyx_v_ndim;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":280
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":280
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -7240,7 +7223,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":283
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":283
  *                 # Allocate new buffer for strides and shape info.
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>PyObject_Malloc(sizeof(Py_ssize_t) * 2 * <size_t>ndim)             # <<<<<<<<<<<<<<
@@ -7249,7 +7232,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->strides = ((Py_ssize_t *)PyObject_Malloc((((sizeof(Py_ssize_t)) * 2) * ((size_t)__pyx_v_ndim))));
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":284
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":284
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>PyObject_Malloc(sizeof(Py_ssize_t) * 2 * <size_t>ndim)
  *                 info.shape = info.strides + ndim             # <<<<<<<<<<<<<<
@@ -7258,7 +7241,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->shape = (__pyx_v_info->strides + __pyx_v_ndim);
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":285
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":285
  *                 info.strides = <Py_ssize_t*>PyObject_Malloc(sizeof(Py_ssize_t) * 2 * <size_t>ndim)
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):             # <<<<<<<<<<<<<<
@@ -7270,7 +7253,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":286
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":286
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]             # <<<<<<<<<<<<<<
@@ -7279,7 +7262,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
       (__pyx_v_info->strides[__pyx_v_i]) = (PyArray_STRIDES(__pyx_v_self)[__pyx_v_i]);
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":287
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":287
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]
  *                     info.shape[i] = PyArray_DIMS(self)[i]             # <<<<<<<<<<<<<<
@@ -7289,7 +7272,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       (__pyx_v_info->shape[__pyx_v_i]) = (PyArray_DIMS(__pyx_v_self)[__pyx_v_i]);
     }
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":280
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":280
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -7299,7 +7282,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L9;
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":289
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":289
  *                     info.shape[i] = PyArray_DIMS(self)[i]
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -7309,7 +7292,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   /*else*/ {
     __pyx_v_info->strides = ((Py_ssize_t *)PyArray_STRIDES(__pyx_v_self));
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":290
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":290
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -7320,7 +7303,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L9:;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":291
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":291
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL             # <<<<<<<<<<<<<<
@@ -7329,7 +7312,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->suboffsets = NULL;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":292
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":292
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
@@ -7338,7 +7321,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(__pyx_v_self);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":293
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":293
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
@@ -7347,7 +7330,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->readonly = (!(PyArray_ISWRITEABLE(__pyx_v_self) != 0));
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":296
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":296
  * 
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
@@ -7356,7 +7339,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_f = NULL;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":297
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":297
  *             cdef int t
  *             cdef char* f = NULL
  *             cdef dtype descr = <dtype>PyArray_DESCR(self)             # <<<<<<<<<<<<<<
@@ -7369,7 +7352,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_v_descr = ((PyArray_Descr *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":300
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":300
  *             cdef int offset
  * 
  *             info.obj = self             # <<<<<<<<<<<<<<
@@ -7382,7 +7365,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __Pyx_DECREF(__pyx_v_info->obj);
   __pyx_v_info->obj = ((PyObject *)__pyx_v_self);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":302
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":302
  *             info.obj = self
  * 
  *             if not PyDataType_HASFIELDS(descr):             # <<<<<<<<<<<<<<
@@ -7392,7 +7375,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = ((!(PyDataType_HASFIELDS(__pyx_v_descr) != 0)) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":303
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":303
  * 
  *             if not PyDataType_HASFIELDS(descr):
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
@@ -7402,7 +7385,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_4 = __pyx_v_descr->type_num;
     __pyx_v_t = __pyx_t_4;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":304
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":304
  *             if not PyDataType_HASFIELDS(descr):
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -7422,7 +7405,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     }
     __pyx_L15_next_or:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":305
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":305
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -7439,7 +7422,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_1 = __pyx_t_2;
     __pyx_L14_bool_binop_done:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":304
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":304
  *             if not PyDataType_HASFIELDS(descr):
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -7448,7 +7431,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     if (unlikely(__pyx_t_1)) {
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":306
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":306
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -7461,7 +7444,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 306, __pyx_L1_error)
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":304
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":304
  *             if not PyDataType_HASFIELDS(descr):
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -7470,7 +7453,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     }
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":307
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":307
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"             # <<<<<<<<<<<<<<
@@ -7483,7 +7466,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_UBYTE:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":308
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":308
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"             # <<<<<<<<<<<<<<
@@ -7494,7 +7477,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_SHORT:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":309
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":309
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"             # <<<<<<<<<<<<<<
@@ -7505,7 +7488,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_USHORT:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":310
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":310
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"             # <<<<<<<<<<<<<<
@@ -7516,7 +7499,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_INT:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":311
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":311
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"             # <<<<<<<<<<<<<<
@@ -7527,7 +7510,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_UINT:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":312
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":312
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"             # <<<<<<<<<<<<<<
@@ -7538,7 +7521,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_LONG:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":313
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":313
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"             # <<<<<<<<<<<<<<
@@ -7549,7 +7532,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_ULONG:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":314
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":314
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"             # <<<<<<<<<<<<<<
@@ -7560,7 +7543,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_LONGLONG:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":315
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":315
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"             # <<<<<<<<<<<<<<
@@ -7571,7 +7554,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_ULONGLONG:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":316
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":316
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"             # <<<<<<<<<<<<<<
@@ -7582,7 +7565,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_FLOAT:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":317
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":317
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"             # <<<<<<<<<<<<<<
@@ -7593,7 +7576,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_DOUBLE:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":318
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":318
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"             # <<<<<<<<<<<<<<
@@ -7604,7 +7587,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_LONGDOUBLE:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":319
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":319
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"             # <<<<<<<<<<<<<<
@@ -7615,7 +7598,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_CFLOAT:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":320
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":320
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"             # <<<<<<<<<<<<<<
@@ -7626,7 +7609,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_CDOUBLE:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":321
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":321
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"             # <<<<<<<<<<<<<<
@@ -7637,7 +7620,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_CLONGDOUBLE:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":322
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":322
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"             # <<<<<<<<<<<<<<
@@ -7648,7 +7631,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_OBJECT:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":323
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":323
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"
  *                 elif t == NPY_OBJECT:      f = "O"             # <<<<<<<<<<<<<<
@@ -7659,7 +7642,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       default:
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":325
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":325
  *                 elif t == NPY_OBJECT:      f = "O"
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -7680,7 +7663,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
     }
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":326
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":326
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f             # <<<<<<<<<<<<<<
@@ -7689,7 +7672,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->format = __pyx_v_f;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":327
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":327
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f
  *                 return             # <<<<<<<<<<<<<<
@@ -7699,7 +7682,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":302
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":302
  *             info.obj = self
  * 
  *             if not PyDataType_HASFIELDS(descr):             # <<<<<<<<<<<<<<
@@ -7708,7 +7691,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":329
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":329
  *                 return
  *             else:
  *                 info.format = <char*>PyObject_Malloc(_buffer_format_string_len)             # <<<<<<<<<<<<<<
@@ -7718,7 +7701,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   /*else*/ {
     __pyx_v_info->format = ((char *)PyObject_Malloc(0xFF));
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":330
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":330
  *             else:
  *                 info.format = <char*>PyObject_Malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment             # <<<<<<<<<<<<<<
@@ -7727,7 +7710,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     (__pyx_v_info->format[0]) = '^';
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":331
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":331
  *                 info.format = <char*>PyObject_Malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0             # <<<<<<<<<<<<<<
@@ -7736,7 +7719,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_offset = 0;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":332
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":332
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0
  *                 f = _util_dtypestring(descr, info.format + 1,             # <<<<<<<<<<<<<<
@@ -7746,7 +7729,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_9 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 0xFF), (&__pyx_v_offset)); if (unlikely(__pyx_t_9 == ((char *)NULL))) __PYX_ERR(1, 332, __pyx_L1_error)
     __pyx_v_f = __pyx_t_9;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":335
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":335
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = c'\0' # Terminate format string             # <<<<<<<<<<<<<<
@@ -7756,7 +7739,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     (__pyx_v_f[0]) = '\x00';
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":258
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":258
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -7788,7 +7771,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":337
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":337
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -7812,7 +7795,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__releasebuffer__", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":338
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":338
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -7822,7 +7805,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (PyArray_HASFIELDS(__pyx_v_self) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":339
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":339
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):
  *                 PyObject_Free(info.format)             # <<<<<<<<<<<<<<
@@ -7831,7 +7814,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
     PyObject_Free(__pyx_v_info->format);
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":338
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":338
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -7840,7 +7823,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":340
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":340
  *             if PyArray_HASFIELDS(self):
  *                 PyObject_Free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -7850,7 +7833,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":341
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":341
  *                 PyObject_Free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 PyObject_Free(info.strides)             # <<<<<<<<<<<<<<
@@ -7859,7 +7842,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
     PyObject_Free(__pyx_v_info->strides);
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":340
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":340
  *             if PyArray_HASFIELDS(self):
  *                 PyObject_Free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -7868,7 +7851,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":337
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":337
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -7880,7 +7863,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":820
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":820
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -7897,7 +7880,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":821
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":821
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -7911,7 +7894,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":820
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":820
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -7930,7 +7913,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":823
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":823
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -7947,7 +7930,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":824
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":824
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -7961,7 +7944,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":823
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":823
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -7980,7 +7963,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":826
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":826
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -7997,7 +7980,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":827
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":827
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -8011,7 +7994,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":826
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":826
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -8030,7 +8013,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":829
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":829
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -8047,7 +8030,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":830
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":830
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -8061,7 +8044,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":829
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":829
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -8080,7 +8063,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":832
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":832
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -8097,7 +8080,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":833
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":833
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -8111,7 +8094,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":832
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":832
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -8130,7 +8113,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":835
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":835
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -8144,7 +8127,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":836
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":836
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -8154,7 +8137,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = (PyDataType_HASSUBARRAY(__pyx_v_d) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":837
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":837
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -8166,7 +8149,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":836
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":836
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -8175,7 +8158,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":839
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":839
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -8189,7 +8172,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":835
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":835
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -8204,7 +8187,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":841
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":841
  *         return ()
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -8236,7 +8219,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_util_dtypestring", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":846
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":846
  * 
  *     cdef dtype child
  *     cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -8245,7 +8228,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_endian_detector = 1;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":847
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":847
  *     cdef dtype child
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -8254,7 +8237,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":850
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":850
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -8277,7 +8260,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_childname, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":851
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":851
  * 
  *     for childname in descr.names:
  *         fields = descr.fields[childname]             # <<<<<<<<<<<<<<
@@ -8294,7 +8277,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_fields, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":852
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":852
  *     for childname in descr.names:
  *         fields = descr.fields[childname]
  *         child, new_offset = fields             # <<<<<<<<<<<<<<
@@ -8329,7 +8312,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_new_offset, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":854
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":854
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -8346,7 +8329,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((((__pyx_v_end - __pyx_v_f) - ((int)__pyx_t_5)) < 15) != 0);
     if (unlikely(__pyx_t_6)) {
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":855
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":855
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -8359,7 +8342,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 855, __pyx_L1_error)
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":854
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":854
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -8368,7 +8351,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     }
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":857
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":857
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -8388,7 +8371,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L8_next_or:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":858
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":858
  * 
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -8405,7 +8388,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = __pyx_t_7;
     __pyx_L7_bool_binop_done:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":857
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":857
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -8414,7 +8397,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     if (unlikely(__pyx_t_6)) {
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":859
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":859
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -8427,7 +8410,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 859, __pyx_L1_error)
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":857
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":857
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -8436,7 +8419,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     }
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":869
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":869
  * 
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
@@ -8452,7 +8435,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (!__pyx_t_6) break;
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":870
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":870
  *         # Output padding bytes
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte             # <<<<<<<<<<<<<<
@@ -8461,7 +8444,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       (__pyx_v_f[0]) = 0x78;
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":871
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":871
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
@@ -8470,7 +8453,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":872
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":872
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
@@ -8481,7 +8464,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + 1);
     }
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":874
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":874
  *             offset[0] += 1
  * 
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
@@ -8491,7 +8474,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_8 = 0;
     (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + __pyx_v_child->elsize);
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":876
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":876
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -8501,7 +8484,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((!(PyDataType_HASFIELDS(__pyx_v_child) != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":877
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":877
  * 
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
@@ -8513,7 +8496,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_XDECREF_SET(__pyx_v_t, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":878
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":878
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -8523,7 +8506,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __pyx_t_6 = (((__pyx_v_end - __pyx_v_f) < 5) != 0);
       if (unlikely(__pyx_t_6)) {
 
-        /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":879
+        /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":879
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -8536,7 +8519,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __PYX_ERR(1, 879, __pyx_L1_error)
 
-        /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":878
+        /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":878
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -8545,7 +8528,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":882
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":882
  * 
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
@@ -8563,7 +8546,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":883
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":883
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"             # <<<<<<<<<<<<<<
@@ -8581,7 +8564,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":884
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":884
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"             # <<<<<<<<<<<<<<
@@ -8599,7 +8582,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":885
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":885
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"             # <<<<<<<<<<<<<<
@@ -8617,7 +8600,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":886
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":886
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"             # <<<<<<<<<<<<<<
@@ -8635,7 +8618,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":887
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":887
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"             # <<<<<<<<<<<<<<
@@ -8653,7 +8636,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":888
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":888
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"             # <<<<<<<<<<<<<<
@@ -8671,7 +8654,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":889
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":889
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"             # <<<<<<<<<<<<<<
@@ -8689,7 +8672,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":890
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":890
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"             # <<<<<<<<<<<<<<
@@ -8707,7 +8690,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":891
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":891
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"             # <<<<<<<<<<<<<<
@@ -8725,7 +8708,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":892
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":892
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"             # <<<<<<<<<<<<<<
@@ -8743,7 +8726,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":893
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":893
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"             # <<<<<<<<<<<<<<
@@ -8761,7 +8744,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":894
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":894
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"             # <<<<<<<<<<<<<<
@@ -8779,7 +8762,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":895
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":895
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf             # <<<<<<<<<<<<<<
@@ -8799,7 +8782,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":896
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":896
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd             # <<<<<<<<<<<<<<
@@ -8819,7 +8802,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":897
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":897
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg             # <<<<<<<<<<<<<<
@@ -8839,7 +8822,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":898
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":898
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"             # <<<<<<<<<<<<<<
@@ -8857,7 +8840,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":900
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":900
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -8876,7 +8859,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       }
       __pyx_L15:;
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":901
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":901
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *             f += 1             # <<<<<<<<<<<<<<
@@ -8885,7 +8868,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":876
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":876
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -8895,7 +8878,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       goto __pyx_L13;
     }
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":905
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":905
  *             # Cython ignores struct boundary information ("T{...}"),
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
@@ -8908,7 +8891,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L13:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":850
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":850
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -8918,7 +8901,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":906
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":906
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
@@ -8928,7 +8911,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":841
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":841
  *         return ()
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -8953,7 +8936,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1021
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1021
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -8965,7 +8948,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1022
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1022
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -8974,7 +8957,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1023
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1023
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -8983,7 +8966,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   (void)(PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base));
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1021
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1021
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -8995,7 +8978,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1025
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1025
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -9010,7 +8993,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1026
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1026
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -9019,7 +9002,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1027
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1027
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -9029,7 +9012,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1028
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1028
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -9040,7 +9023,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1027
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1027
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -9049,7 +9032,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1029
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1029
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -9061,7 +9044,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1025
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1025
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -9076,7 +9059,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1033
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1033
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -9100,7 +9083,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1034
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1034
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -9116,7 +9099,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1035
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1035
  * cdef inline int import_array() except -1:
  *     try:
  *         _import_array()             # <<<<<<<<<<<<<<
@@ -9125,7 +9108,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 1035, __pyx_L3_error)
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1034
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1034
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -9139,7 +9122,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1036
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1036
  *     try:
  *         _import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -9154,7 +9137,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1037
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1037
  *         _import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -9170,7 +9153,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1034
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1034
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -9185,7 +9168,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1033
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1033
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -9208,7 +9191,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1039
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1039
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -9232,7 +9215,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1040
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1040
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -9248,7 +9231,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1041
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1041
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -9257,7 +9240,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 1041, __pyx_L3_error)
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1040
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1040
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -9271,7 +9254,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1042
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1042
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -9286,7 +9269,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1043
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1043
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -9302,7 +9285,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1040
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1040
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -9317,7 +9300,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1039
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1039
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -9340,7 +9323,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1045
+/* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1045
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -9364,7 +9347,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1046
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1046
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -9380,7 +9363,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1047
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1047
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -9389,7 +9372,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 1047, __pyx_L3_error)
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1046
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1046
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -9403,7 +9386,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1048
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1048
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -9417,7 +9400,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1049
+      /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1049
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -9431,7 +9414,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1046
+    /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1046
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -9446,7 +9429,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1045
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1045
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -23301,7 +23284,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_compute_skewness_ijk, __pyx_k_compute_skewness_ijk, sizeof(__pyx_k_compute_skewness_ijk), 0, 0, 1, 1},
   {&__pyx_kp_s_contiguous_and_direct, __pyx_k_contiguous_and_direct, sizeof(__pyx_k_contiguous_and_direct), 0, 0, 1, 0},
   {&__pyx_kp_s_contiguous_and_indirect, __pyx_k_contiguous_and_indirect, sizeof(__pyx_k_contiguous_and_indirect), 0, 0, 1, 0},
-  {&__pyx_kp_s_cumulant_computer_pyx, __pyx_k_cumulant_computer_pyx, sizeof(__pyx_k_cumulant_computer_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_d_ijk, __pyx_k_d_ijk, sizeof(__pyx_k_d_ijk), 0, 0, 1, 1},
   {&__pyx_n_s_dict, __pyx_k_dict, sizeof(__pyx_k_dict), 0, 0, 1, 1},
   {&__pyx_n_s_dim, __pyx_k_dim, sizeof(__pyx_k_dim), 0, 0, 1, 1},
@@ -23367,8 +23349,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_obj, __pyx_k_obj, sizeof(__pyx_k_obj), 0, 0, 1, 1},
   {&__pyx_n_s_pack, __pyx_k_pack, sizeof(__pyx_k_pack), 0, 0, 1, 1},
   {&__pyx_n_s_pickle, __pyx_k_pickle, sizeof(__pyx_k_pickle), 0, 0, 1, 1},
-  {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
-  {&__pyx_n_s_pypop_models_hawkes__cumulant_co, __pyx_k_pypop_models_hawkes__cumulant_co, sizeof(__pyx_k_pypop_models_hawkes__cumulant_co), 0, 0, 1, 1},
+  {&__pyx_kp_s_pypop_models_hawkes__cumulant_co, __pyx_k_pypop_models_hawkes__cumulant_co, sizeof(__pyx_k_pypop_models_hawkes__cumulant_co), 0, 0, 1, 0},
+  {&__pyx_n_s_pypop_models_hawkes__cumulant_co_2, __pyx_k_pypop_models_hawkes__cumulant_co_2, sizeof(__pyx_k_pypop_models_hawkes__cumulant_co_2), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_PickleError, __pyx_k_pyx_PickleError, sizeof(__pyx_k_pyx_PickleError), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_checksum, __pyx_k_pyx_checksum, sizeof(__pyx_k_pyx_checksum), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_getbuffer, __pyx_k_pyx_getbuffer, sizeof(__pyx_k_pyx_getbuffer), 0, 0, 1, 1},
@@ -23417,7 +23399,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 30, __pyx_L1_error)
-  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 272, __pyx_L1_error)
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(1, 855, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 1037, __pyx_L1_error)
@@ -23436,7 +23417,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":272
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":272
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -23447,7 +23428,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":276
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":276
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -23458,7 +23439,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":306
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":306
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -23469,7 +23450,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":855
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":855
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -23480,7 +23461,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":879
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":879
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -23491,7 +23472,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1037
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1037
  *         _import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -23502,7 +23483,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "../../../../../../../../../miniconda3/envs/mhp-cumulants/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1043
+  /* "../miniconda/envs/env/lib/python3.7/site-packages/Cython/Includes/numpy/__init__.pxd":1043
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -23715,7 +23696,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__26 = PyTuple_Pack(17, __pyx_n_s_mean_intensity_j, __pyx_n_s_integration_support, __pyx_n_s_events_i, __pyx_n_s_events_j, __pyx_n_s_end_time, __pyx_n_s_val, __pyx_n_s_trend_C_j, __pyx_n_s_max_time, __pyx_n_s_n_i, __pyx_n_s_n_j, __pyx_n_s_t_k_i, __pyx_n_s_t_l_j, __pyx_n_s_first_valid_l, __pyx_n_s_events_in_interval, __pyx_n_s_k, __pyx_n_s_l, __pyx_n_s_abs_diff); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(5, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cumulant_computer_pyx, __pyx_n_s_compute_covariance_ij, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(5, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pypop_models_hawkes__cumulant_co, __pyx_n_s_compute_covariance_ij, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 13, __pyx_L1_error)
 
   /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":71
  * 
@@ -23727,7 +23708,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__28 = PyTuple_Pack(11, __pyx_n_s_integration_support, __pyx_n_s_end_times, __pyx_n_s_mean_intensity, __pyx_n_s_multi_events, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_nreal, __pyx_n_s_dim, __pyx_n_s_C, __pyx_n_s_r, __pyx_n_s_c_ij); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(4, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cumulant_computer_pyx, __pyx_n_s_compute_covariance, 71, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(4, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pypop_models_hawkes__cumulant_co, __pyx_n_s_compute_covariance, 71, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 71, __pyx_L1_error)
 
   /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":188
  * 
@@ -23739,7 +23720,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__30 = PyTuple_Pack(26, __pyx_n_s_integration_support, __pyx_n_s_end_time, __pyx_n_s_mean_intensity_i, __pyx_n_s_mean_intensity_j, __pyx_n_s_mean_intensity_k, __pyx_n_s_events_i, __pyx_n_s_events_j, __pyx_n_s_events_k, __pyx_n_s_val, __pyx_n_s_trend_j, __pyx_n_s_trend_k, __pyx_n_s_trend_ijk, __pyx_n_s_max_time, __pyx_n_s_n_i, __pyx_n_s_n_j, __pyx_n_s_n_k, __pyx_n_s_t_a_i, __pyx_n_s_t_b_j, __pyx_n_s_t_c_k, __pyx_n_s_first_valid_b, __pyx_n_s_first_valid_c, __pyx_n_s_events_j_in_interval, __pyx_n_s_events_k_in_interval, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_c); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(8, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cumulant_computer_pyx, __pyx_n_s_compute_skewness_ijk, 188, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(8, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pypop_models_hawkes__cumulant_co, __pyx_n_s_compute_skewness_ijk, 188, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 188, __pyx_L1_error)
 
   /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":260
  * 
@@ -23751,43 +23732,43 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__32 = PyTuple_Pack(11, __pyx_n_s_integration_support, __pyx_n_s_end_times, __pyx_n_s_mean_intensity, __pyx_n_s_multi_events, __pyx_n_s_r, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_nreal, __pyx_n_s_dim, __pyx_n_s_Kc, __pyx_n_s_kc_ij); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(4, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cumulant_computer_pyx, __pyx_n_s_compute_skewness, 260, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 260, __pyx_L1_error)
+  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(4, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pypop_models_hawkes__cumulant_co, __pyx_n_s_compute_skewness, 260, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 260, __pyx_L1_error)
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":289
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":287
  * 
  * 
  * def compute_skewness_all(double integration_support, list end_times,             # <<<<<<<<<<<<<<
  *                          np.ndarray[DTYPE_d_t, ndim=1] mean_intensity,
  *                          list multi_events):
  */
-  __pyx_tuple__34 = PyTuple_Pack(12, __pyx_n_s_integration_support, __pyx_n_s_end_times, __pyx_n_s_mean_intensity, __pyx_n_s_multi_events, __pyx_n_s_r, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_k, __pyx_n_s_nreal, __pyx_n_s_dim, __pyx_n_s_d_ijk, __pyx_n_s_D); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_tuple__34 = PyTuple_Pack(12, __pyx_n_s_integration_support, __pyx_n_s_end_times, __pyx_n_s_mean_intensity, __pyx_n_s_multi_events, __pyx_n_s_r, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_k, __pyx_n_s_nreal, __pyx_n_s_dim, __pyx_n_s_d_ijk, __pyx_n_s_D); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__34);
   __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(4, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cumulant_computer_pyx, __pyx_n_s_compute_skewness_all, 289, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(4, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pypop_models_hawkes__cumulant_co, __pyx_n_s_compute_skewness_all, 287, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 287, __pyx_L1_error)
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":318
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":316
  * 
  * 
  * def compute_ground_truth_skewness(np.ndarray[DTYPE_d_t, ndim=1] L_vec,             # <<<<<<<<<<<<<<
  *                                   np.ndarray[DTYPE_d_t, ndim=2] C,
  *                                   np.ndarray[DTYPE_d_t, ndim=2] R):
  */
-  __pyx_tuple__36 = PyTuple_Pack(9, __pyx_n_s_L_vec, __pyx_n_s_C, __pyx_n_s_R, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_k, __pyx_n_s_m, __pyx_n_s_dim, __pyx_n_s_D); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __pyx_tuple__36 = PyTuple_Pack(9, __pyx_n_s_L_vec, __pyx_n_s_C, __pyx_n_s_R, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_k, __pyx_n_s_m, __pyx_n_s_dim, __pyx_n_s_D); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 316, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
-  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(3, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cumulant_computer_pyx, __pyx_n_s_compute_ground_truth_skewness, 318, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(3, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pypop_models_hawkes__cumulant_co, __pyx_n_s_compute_ground_truth_skewness, 316, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 316, __pyx_L1_error)
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":339
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":337
  * 
  * 
  * def compute_covariance_ij_nphc(int r, int i, int j, double mean_intensity_j,             # <<<<<<<<<<<<<<
  *                           double integration_support, double end_time_r,
  *                           np.ndarray[DTYPE_d_t, ndim=1] events_i,
  */
-  __pyx_tuple__38 = PyTuple_Pack(20, __pyx_n_s_r, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_mean_intensity_j, __pyx_n_s_integration_support, __pyx_n_s_end_time_r, __pyx_n_s_events_i, __pyx_n_s_events_j, __pyx_n_s_res_C, __pyx_n_s_width, __pyx_n_s_trend_C_j, __pyx_n_s_n_i, __pyx_n_s_n_j, __pyx_n_s_t_k_i, __pyx_n_s_t_l_j, __pyx_n_s_last_l, __pyx_n_s_events_in_interval, __pyx_n_s_k, __pyx_n_s_l, __pyx_n_s_abs_diff); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_tuple__38 = PyTuple_Pack(20, __pyx_n_s_r, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_mean_intensity_j, __pyx_n_s_integration_support, __pyx_n_s_end_time_r, __pyx_n_s_events_i, __pyx_n_s_events_j, __pyx_n_s_res_C, __pyx_n_s_width, __pyx_n_s_trend_C_j, __pyx_n_s_n_i, __pyx_n_s_n_j, __pyx_n_s_t_k_i, __pyx_n_s_t_l_j, __pyx_n_s_last_l, __pyx_n_s_events_in_interval, __pyx_n_s_k, __pyx_n_s_l, __pyx_n_s_abs_diff); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__38);
   __Pyx_GIVEREF(__pyx_tuple__38);
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(8, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cumulant_computer_pyx, __pyx_n_s_compute_covariance_ij_nphc, 339, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(8, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pypop_models_hawkes__cumulant_co, __pyx_n_s_compute_covariance_ij_nphc, 337, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 337, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -24267,7 +24248,7 @@ if (!__Pyx_RefNanny) {
  *                           np.ndarray[DTYPE_d_t, ndim=1] events_i,
  *                           np.ndarray[DTYPE_d_t, ndim=1] events_j,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_1_compute_covariance_ij, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_1_compute_covariance_ij, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_covariance_ij, __pyx_t_2) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -24279,7 +24260,7 @@ if (!__Pyx_RefNanny) {
  *                        list end_times,
  *                        np.ndarray[DTYPE_d_t, ndim=1] mean_intensity,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_3compute_covariance, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_3compute_covariance, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_covariance, __pyx_t_2) < 0) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -24291,7 +24272,7 @@ if (!__Pyx_RefNanny) {
  *                          double end_time,
  *                          double mean_intensity_i,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_5compute_skewness_ijk, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_5compute_skewness_ijk, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_skewness_ijk, __pyx_t_2) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -24303,45 +24284,45 @@ if (!__Pyx_RefNanny) {
  *                      np.ndarray[DTYPE_d_t, ndim=1] mean_intensity,
  *                      list multi_events):
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_7compute_skewness, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_7compute_skewness, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_skewness, __pyx_t_2) < 0) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":289
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":287
  * 
  * 
  * def compute_skewness_all(double integration_support, list end_times,             # <<<<<<<<<<<<<<
  *                          np.ndarray[DTYPE_d_t, ndim=1] mean_intensity,
  *                          list multi_events):
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_9compute_skewness_all, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_9compute_skewness_all, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_skewness_all, __pyx_t_2) < 0) __PYX_ERR(0, 289, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_skewness_all, __pyx_t_2) < 0) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":318
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":316
  * 
  * 
  * def compute_ground_truth_skewness(np.ndarray[DTYPE_d_t, ndim=1] L_vec,             # <<<<<<<<<<<<<<
  *                                   np.ndarray[DTYPE_d_t, ndim=2] C,
  *                                   np.ndarray[DTYPE_d_t, ndim=2] R):
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_11compute_ground_truth_skewness, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_11compute_ground_truth_skewness, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_ground_truth_skewness, __pyx_t_2) < 0) __PYX_ERR(0, 318, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_ground_truth_skewness, __pyx_t_2) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":339
+  /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":337
  * 
  * 
  * def compute_covariance_ij_nphc(int r, int i, int j, double mean_intensity_j,             # <<<<<<<<<<<<<<
  *                           double integration_support, double end_time_r,
  *                           np.ndarray[DTYPE_d_t, ndim=1] events_i,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_13compute_covariance_ij_nphc, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_5pypop_6models_6hawkes_18_cumulant_computer_17cumulant_computer_13compute_covariance_ij_nphc, NULL, __pyx_n_s_pypop_models_hawkes__cumulant_co_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_covariance_ij_nphc, __pyx_t_2) < 0) __PYX_ERR(0, 339, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_compute_covariance_ij_nphc, __pyx_t_2) < 0) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx":1

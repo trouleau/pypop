@@ -8,18 +8,6 @@ def edge_error(adj_excit_test, adj_excit_true, delta_t, n_nodes):
     return diff_excit.sum() * delta_t / n_nodes**2
 
 
-def AUC(adj_test, adj_true):
-    threshold_range = np.linspace(adj_test.max() + 0.1, 0.0, num=50)
-    tps = np.array([utils.metrics.true_positive(adj_test, adj_true, threshold=x) for x in threshold_range])
-    tns = np.array([utils.metrics.true_negative(adj_test, adj_true, threshold=x) for x in threshold_range])
-    fns = np.array([utils.metrics.false_negative(adj_test, adj_true, threshold=x) for x in threshold_range])
-    fps = np.array([utils.metrics.false_positive(adj_test, adj_true, threshold=x) for x in threshold_range])
-    tpr = tps/(tps+fns)
-    fpr = fps/(tns+fps)
-    AUC_val = sum(np.diff(fpr) * tpr[1:])
-    return AUC_val
-
-
 def accuracy(adj_test, adj_true, threshold=0.05):
     assert (len(adj_test.shape) == 1) and (len(adj_true.shape) == 1), \
      "Parameters should be one-dimensional"
@@ -203,29 +191,9 @@ def relerr(adj_test, adj_true, norm=True, null_norm='min'):
     return rel_err / n_nodes
 
 
-def roc_auc(adj_test, adj_true, thresh_range=None):
-    if thresh_range is None:
-        thresh_range = np.linspace(0.0, adj_true.max() + 1e-5, num=500)
-    adj_test = adj_test.ravel()
-    adj_true = adj_true.ravel()
-    pre_arr = np.zeros_like(thresh_range)
-    rec_arr = np.zeros_like(thresh_range)
-    for i, thresh in enumerate(thresh_range):
-        pre_arr[i] = precision(adj_test=adj_test, adj_true=adj_true, threshold=thresh)
-        rec_arr[i] = recall(adj_test=adj_test, adj_true=adj_true, threshold=thresh)
-    auc = sklearn.metrics.auc(rec_arr, pre_arr)
-    return auc
+def roc_auc_score(adj_test, adj_true):
+    return sklearn.metrics.roc_auc_score(np.ravel(adj_true) > 0, np.ravel(adj_test))
 
 
-def pr_auc(adj_test, adj_true, thresh_range=None):
-    if thresh_range is None:
-        thresh_range = np.linspace(-1e-5, adj_true.max() + 1e-5, num=500)
-    adj_test = adj_test.ravel()
-    adj_true = adj_true.ravel()
-    tpr_arr = np.zeros_like(thresh_range)
-    fpr_arr = np.zeros_like(thresh_range)
-    for i, thresh in enumerate(thresh_range):
-        tpr_arr[i] = tpr(adj_test=adj_test, adj_true=adj_true, threshold=thresh)
-        fpr_arr[i] = fpr(adj_test=adj_test, adj_true=adj_true, threshold=thresh)
-    auc = sklearn.metrics.auc(fpr_arr, tpr_arr)
-    return auc
+def pr_auc_score(adj_test, adj_true):
+    return sklearn.metrics.average_precision_score(np.ravel(adj_true) > 0, np.ravel(adj_test))
