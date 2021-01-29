@@ -280,7 +280,6 @@ class SimulatorNoisyHawkes:
             self.simu_obj.reset()  # Reset object for a new simulation
             self.simu_obj.seed = int(seed)  # Set new random seed
             self.simu_obj.end_time = self.extended_end_time  # Set end time with burn-in periods
-            print(self.simu_obj.end_time)
             self.simu_obj.simulate()   # Simulate realization
             all_events.append(self.simu_obj.timestamps)
         return all_events
