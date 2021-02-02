@@ -99,3 +99,25 @@ def compute_G_tilde_func(kernel, noise_pdf, kernel_support, noise_support_width,
     g_tilde_ij = TimeFunc(t_values_2, y_values_2)
 
     return g_tilde_ij
+
+
+def compute_G_tilde_single_conv_func(kernel, noise_pdf, kernel_support, noise_support_width, n_quad, n_points):
+    M = noise_support_width
+    A = kernel_support
+
+    # If zero-kernel, then return zero-kernel
+    if np.allclose(kernel(np.linspace(0, A, n_points)), 0.0):
+        return TimeFunc(np.array([0.0, 1.0]), np.array([0.0, 0.0]))
+
+    # Compute (f_i * g_ij)(t) for all t and build callable interpolation function
+    t_values_1 = np.linspace(-M/2, A + M/2, n_points)
+    y_values_1 = np.array([compute_conv_at_t(f=noise_pdf,
+                                    g=kernel,
+                                    t=t,
+                                    f_bounds=[-M/2, M/2],
+                                    g_bounds=[0.0, A],
+                                    n_quad=n_quad)
+                  for t in t_values_1])
+    f_i_conv_g_ij = TimeFunc(t_values_1, y_values_1)
+
+    return f_i_conv_g_ij
