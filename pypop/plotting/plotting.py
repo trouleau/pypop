@@ -64,10 +64,48 @@ SIGCONF_RCPARAMS= {
     ]
 }
 
+ICML_RCPARAMS = {
+    # Fig params
+    "figure.autolayout": True,          # Makes sure nothing the feature is neat & tight.
+    "figure.figsize": (3.25, 2.95),     # Page width: 6.75in, space between cols: 0.25 in, column width: 3.25 in
+    "figure.dpi": 150,                  # Displays figures nicely in notebooks.
+    "axes.linewidth": 0.5,              # Matplotlib's current default is 0.8.
+    "xtick.major.width": 0.5,
+    "xtick.minor.width": 0.5,
+    "ytick.major.width": 0.5,
+    "ytick.minor.width": 0.5,
+    "text.usetex": True,                # use LaTeX to write all text
+    "font.family": "serif",             # use serif rather than sans-serif
+    "font.serif": "Times",              # use "Times" as the standard font for ICML
+    "font.size": 7,
+    "axes.titlesize": 7,                # LaTeX default is 10pt font.
+    "axes.labelsize": 7,                # LaTeX default is 10pt font.
+    "legend.fontsize": 7,               # Make the legend/label fonts a little smaller
+    "legend.frameon": True,            # Remove the black frame around the legend
+    "patch.linewidth": 0.5,
+    "xtick.labelsize": 6,
+    "ytick.labelsize": 6,
+    "lines.linewidth": 1.0,
+    "lines.markersize": 4,
+    "grid.linewidth": 0.3,
+    "pgf.texsystem": "xelatex",         # use Xelatex which is TTF font aware
+    "pgf.rcfonts": False,               # Use pgf.preamble, ignore standard Matplotlib RC
+    "pgf.preamble": [
+        r'\usepackage{fontspec}',
+        r'\usepackage{unicode-math}',
+        r'\setmainfont{Times}',
+    ]
+}
 
 def set_notebook_config():
     matplotlib.backend_bases.register_backend('pdf', FigureCanvasPgf)
     matplotlib.rcParams.update(SIGCONF_RCPARAMS)
+    np.set_printoptions(edgeitems=10, linewidth=1000)
+
+
+def set_icml_config():
+    matplotlib.backend_bases.register_backend('pdf', FigureCanvasPgf)
+    matplotlib.rcParams.update(ICML_RCPARAMS)
     np.set_printoptions(edgeitems=10, linewidth=1000)
 
 
@@ -169,7 +207,7 @@ def make_plot_df(df, suf_col_dict, agg_col, threshold=THRESHOLD):
         return df_plot
 
 
-def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.95), grid=None):
+def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.95), grid=None, ticks=None, ytitle=None):
     if labels is None:
         assert isinstance(mats, dict)
         labels = list(mats.keys())
@@ -213,13 +251,21 @@ def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.
         ax.set_aspect(1.0)
         plt.sca(ax)
         ax.invert_yaxis()
-        p = plt.pcolormesh(M, norm=norm, cmap=cmap)
+        dim = len(M)
+        X = np.tile(np.arange(dim+1)+0.5, (dim+1,1))
+        Y = X.T
+        p = plt.pcolormesh(X, Y, M, norm=norm, cmap=cmap)
+        if ticks:
+            plt.xticks(ticks)
+            plt.yticks(ticks)
         p.cmap.set_over('white')
         p.cmap.set_under('black')
-        plt.title(label, pad=10)
+        plt.title(label, pad=10, y=ytitle)
 
         # create an axes on the right side of ax. The width of cax will be 5%
         # of ax and the padding between cax and ax will be fixed at 0.05 inch.
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.1)
         plt.colorbar(p, cax=cax, extend=extend)
+
+    return fig

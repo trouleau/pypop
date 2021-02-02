@@ -65,7 +65,7 @@ class ExponentialKernel(Excitation):
         t : torch.Tensor
             Query time
         """
-        return self.decay * torch.exp(- self.decay * t)
+        return self.decay * torch.exp(- self.decay * t) * (t >= 0)
 
     def callIntegral(self, t):
         """
@@ -138,6 +138,40 @@ class MixtureGaussianFilter(Excitation):
         super(MixtureGaussianFilter, self).__init__(M=M, cut_off=cut_off)
         self.t_m = torch.arange(0, self.M, dtype=torch.float64) * end_time / self.M
         self.sigma = end_time / (M * math.pi)
+        self.GaussianFs = [GaussianFilter(t, self.sigma, cut_off) for t in self.t_m]
+
+    def call(self, t):
+        """
+        value of excitation function
+        """
+        return torch.stack([GaussianF.call(t) for GaussianF in self.GaussianFs])
+
+    def callIntegral(self, t):
+        """
+        Integral of excitation function
+        """
+        return torch.stack([GaussianF.callIntegral(t) for GaussianF in self.GaussianFs])
+
+
+class MixtureGaussianFilterWithNegativeSupport(Excitation):
+
+    def __init__(self, M, min_loc, max_loc, cut_off):
+        """
+        Mixture of Gaussian Filter kernels
+        k(t, t_m) = (2 pi sigma^2)^-1 x exp(-(t-t_m)^2 / (2 sigma^2))
+        K(t, t_m) = int_0^t k(s, t_m) ds = (2 pi sigma^2)^-1 * sqrt(pi /2) * sigma * [erf{t_m/(sigma sqrt(2))} + erf{(t-t_m)/(sigma sqrt(2))} ]
+
+        Arguments:
+        ----------
+        t_m : A vector of torch.float (M x 1)
+        sigma:  torch.float
+        M : int
+            The number of basis functions
+        sigma = 1 / w_0
+        """
+        super().__init__(M=M, cut_off=cut_off)
+        self.t_m = torch.linspace(min_loc, max_loc, M, dtype=torch.float64)
+        self.sigma = (max_loc - min_loc) / (M * math.pi)
         self.GaussianFs = [GaussianFilter(t, self.sigma, cut_off) for t in self.t_m]
 
     def call(self, t):

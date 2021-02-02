@@ -87,7 +87,7 @@ class HawkesModel(Model):
         """
         # Split coeffs
         mu = coeffs[:self.dim]
-        W = coeffs[self.dim:self.dim + self.dim**2].reshape(self.dim, self.dim, self.excitation.M)
+        W = coeffs[self.dim:].reshape(self.dim, self.dim, self.excitation.M)
         # Compute log-likelihood
         log_like = 0
         for i in range(self.dim):
