@@ -6,18 +6,13 @@ from .utils.decorators import enforce_observed
 
 
 class Fitter(metaclass=abc.ABCMeta):
+    """
+    Abstract fitter object for fitting algorithms with a `fit` function
+    """
 
     def _check_convergence(self, tol):
         """Check convergence of `fit`"""
-        # Keep this feature in `numpy`
-        # coeffs = self.coeffs
-        # if isinstance(coeffs, torch.Tensor):
-        #     coeffs = coeffs.detach().numpy()
-        # if hasattr(self, 'coeffs_prev'):
-        #     if np.abs(coeffs - self.coeffs_prev).max() < tol:
-        #         return True
-        # self.coeffs_prev = coeffs.copy()
-        # return False
+        # Keep this feature in `numpy`, even for `torch` backends
         loss = float(self.loss)
         if hasattr(self, 'loss_prev'):
             rel_loss = abs(loss - self.loss_prev) / abs(self.loss_prev)
@@ -25,6 +20,11 @@ class Fitter(metaclass=abc.ABCMeta):
                 return True
         self.loss_prev = float(loss)
         return False
+
+    @abc.abstractmethod
+    @enforce_observed
+    def fit(self, *args, **kwargs):
+        pass
 
 
 class FitterIterativeNumpy(Fitter):
@@ -84,12 +84,11 @@ class FitterIterativeNumpy(Fitter):
 
 class FitterSGD(Fitter):
     """
-    Simple SGD Fitter projected on positive hyperplane.
+    Simple SGD Fitter projected on positive hyperplane based on `torch`.
 
-    Methods
-    -------
-    fit -- Fit the model
-    _take_gradient_step -- take one gradient step
+    Methods:
+    --------
+    fit : Fit the model
     """
 
     def __init__(self):
@@ -255,8 +254,7 @@ class FitterSGD(Fitter):
 
 class FitterVariationalEM(Fitter):
     """
-    Variational EM Fitter
-
+    Fitter object implementing the Variational EM algorithm.
 
     """
 
@@ -347,12 +345,6 @@ class FitterVariationalEM(Fitter):
             # Check that the optimization did not fail
             if torch.isnan(self.coeffs).any():
                 raise ValueError('NaNs in coeffs! Stop optimization...')
-
-            # # Convergence check and callback
-            # if self._check_convergence(tol):
-            #     callback(self, end='\n')  # Callback before the end
-            #     print('Converged!')
-            #     return True
 
             if (t+1) % 100 == 0:
                 # Check convergence in callback (if available)

@@ -233,6 +233,10 @@ def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.
         fig, axs = plt.subplots(num_rows, num_cols, figsize=figsize)
         axs = np.ravel(axs)
 
+        while len(mats) < len(axs):
+            mats.append(None)
+            labels.append(None)
+
     if (vmin is None) and (vmax is None):
         extend = 'neither'
     elif (vmin is not None) and (vmax is None):
@@ -248,19 +252,22 @@ def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.
     cmap = 'plasma'
 
     for ax, M, label in zip(axs, mats, labels):
-        ax.set_aspect(1.0)
         plt.sca(ax)
-        ax.invert_yaxis()
-        dim = len(M)
-        X = np.tile(np.arange(dim+1)+0.5, (dim+1,1))
-        Y = X.T
-        p = plt.pcolormesh(X, Y, M, norm=norm, cmap=cmap)
-        if ticks:
-            plt.xticks(ticks)
-            plt.yticks(ticks)
-        p.cmap.set_over('white')
-        p.cmap.set_under('black')
-        plt.title(label, pad=10, y=ytitle)
+        if M is not None:
+            ax.invert_yaxis()
+            ax.set_aspect(1.0)
+            dim = len(M)
+            X = np.tile(np.arange(dim+1)+0.5, (dim+1,1))
+            Y = X.T
+            p = plt.pcolormesh(X, Y, M, norm=norm, cmap=cmap)
+            if ticks:
+                plt.xticks(ticks)
+                plt.yticks(ticks)
+            p.cmap.set_over('white')
+            p.cmap.set_under('black')
+            plt.title(label, pad=10, y=ytitle)
+        else:
+            plt.axis('off')
 
         # create an axes on the right side of ax. The width of cax will be 5%
         # of ax and the padding between cax and ax will be fixed at 0.05 inch.
