@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 
-import tsvar
+import pypop
 import gb
 
 # Fix numpy error behavior after gb, ignore underflow for softmax computations
@@ -9,63 +9,6 @@ np.seterr(under='ignore')
 
 # Set numpy print format
 np.set_printoptions(precision=2, floatmode='fixed', sign=' ')
-
-
-def test_wold_model_loglikelihood():
-    print('\nTesting: WoldModel.log_likelihood:')
-
-    # Toy events
-    events = [
-        torch.tensor([1.0, 3.0, 4.0, 5.0]),
-        torch.tensor([2.0, 4.5, 6.0])
-    ]
-    # Toy end time of observation
-    end_time = 10.0
-    # Parameters of the model, to evaluate the log-likelihood
-    mu = torch.tensor([0.2, 0.1])
-    beta = torch.tensor([1.0, 2.0]) - 1.0
-    A = torch.tensor([[0.1, 0.9],
-                      [0.4, 0.6]])
-    coeffs = torch.cat((mu, beta, A.flatten()))
-    # Create an instance of `WoldModelBetaJ`, set the data and evaluate the
-    # log-likelihood
-    model = tsvar.models.WoldModelBetaJ()
-    model.observe(events, end_time)
-    ll_computed = model.log_likelihood(coeffs)
-
-    # Define the groud-truth intensity at each observed event
-    lam_true = [
-        np.array([
-            0.2,
-            0.2,
-            0.2 + 0.1 / (1 + 2) + 0.4 / (2 + 1),
-            0.2 + 0.1 / (1 + 1) + 0.4 / (2 + 2)
-        ]),
-        np.array([
-            0.1,
-            0.1 + 0.9 / (1 + 1),
-            0.1 + 0.9 / (1 + 0.5) + 0.6 / (2 + 2.5)
-        ])
-    ]
-    # Define the groud-truth intensity at the end time
-    lam_end_true = [
-        0.2 + 0.1 / (1 + 1) + 0.4 / (2 + 0.5),
-        0.1 + 0.9 / (1 + 1) + 0.6 / (2 + 1.5)
-    ]
-    # Compute the ground-truth log-likelood value
-    ll_true = (
-        np.log(lam_true[0]).sum()
-        - np.sum(lam_true[0] * np.hstack((events[0][0], np.diff(events[0]))))
-        - lam_end_true[0] * (end_time - events[0][-1])
-
-        + np.log(lam_true[1]).sum()
-        - np.sum(lam_true[1] * np.hstack((events[1][0], np.diff(events[1]))))
-        - lam_end_true[1] * (end_time - events[1][-1])
-    )
-    print(f'  - Computed loglik.: {ll_computed.item():.5f}')
-    print(f'  - Ground truth loglik.: {ll_true.item():.5f}')
-    assert np.isclose(ll_computed, ll_true), 'Test FAILED !!!'
-    print('  - Test SUCESS!')
 
 
 def generate_test_dataset():
@@ -104,7 +47,7 @@ def generate_test_dataset():
                         'alpha': alpha.numpy()}
     print('  - Simulate lots of data...')
     # Simulate lots of data
-    wold_sim = tsvar.simulate.MultivariateWoldSimulator(
+    wold_sim = pypop.simulate.MultivariateWoldSimulator(
         mu_a=mu, alpha_ba=alpha, beta_ba=beta)
     events = wold_sim.simulate(max_jumps=int(80e4), seed=4243)
     events = [torch.tensor(ev, dtype=torch.float) for ev in events]
@@ -350,8 +293,6 @@ if __name__ == "__main__":
 
     data = generate_test_dataset()
 
-    print('\n', '='*80, '\n', sep='')
-    test_wold_model_loglikelihood()
     print('\n', '-'*50, '\n', sep='')
     test_wold_model_mle(*data)
 
