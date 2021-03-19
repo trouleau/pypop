@@ -1,1 +1,2 @@
 from ._regular_quant_hawkes_model import RegularlyQuantizedHawkesModel
+from ._irregular_quant_hawkes_model import IrregQuantHawkesModel, IrregQuantHawkesModelMLE

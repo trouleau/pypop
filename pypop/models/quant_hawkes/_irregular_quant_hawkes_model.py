@@ -3,7 +3,8 @@ import numpy as np
 import numba
 import warnings
 
-from ._modes import Model, enforce_observed
+from .._models import Model, enforce_observed
+from ...fitter import FitterSGD
 
 
 @numba.jit(nopython=True, fastmath=True)
@@ -29,7 +30,7 @@ class IrregQuantHawkesModel(Model):
     Irreguarly Quantized Multivariate Hawkes Process
     """
 
-    def __init__(self, excitation, verbose=False, device='cpu'):
+    def __init__(self, excitation, verbose=False, device='cpu', **kwargs):
         """
         Initialize the model
 
@@ -41,6 +42,7 @@ class IrregQuantHawkesModel(Model):
             Excitation object
         """
         self.excitation = excitation
+        self.M = self.excitation.M or 1
         self.n_jumps = None
         self.dim = None
         self.n_params = None
@@ -51,6 +53,8 @@ class IrregQuantHawkesModel(Model):
             self.device = 'cuda'
         else:
             self.device = 'cpu'
+        print('IrregQuantHawkesModel.__init__()', self)
+        super().__init__(**kwargs)
 
     def set_data(self, times, counts):
         """
@@ -124,7 +128,7 @@ class IrregQuantHawkesModel(Model):
                    'kernel. Falling back to pure python implementation.'))
             self._init_cache_python()
 
-    @enforce_observed
+    # @enforce_observed
     def log_likelihood(self, mu, W):
         """
         Log likelihood of an irregularly quantized Hawkes process for the given
@@ -180,3 +184,23 @@ class IrregQuantHawkesModel(Model):
         """Compute the intensity in dimension `i` at the `n`-th observation"""
         lamb_in = mu[i] + (W[i] * self._cache[i][:, :, n]).sum(0).sum(0)
         return lamb_in
+
+
+class IrregQuantHawkesModelMLE(IrregQuantHawkesModel, FitterSGD):
+    """Irreguarly Quantized Multivariate Hawkes Process with Maximum Likelihood
+    Estimation fitter"""
+
+    def __init__(self, *args, **kwargs):
+        print('IrregQuantHawkesModelMLE.__init__()', self)
+        super().__init__(*args, **kwargs)
+
+    # @enforce_observed
+    def mle_objective(self, coeffs):
+        """Objectvie function for MLE: Averaged negative log-likelihood"""
+        mu = self.coeffs[:self.dim]
+        W = self.coeffs[self.dim:].reshape(self.dim, self.dim, self.excitation.M)
+        return -1.0 * self.log_likelihood(mu, W) / self.n_jumps
+
+    def fit(self, *args, **kwargs):
+        self._n_iter_done = 0
+        return super().fit(objective_func=self.mle_objective, *args, **kwargs)

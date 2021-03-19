@@ -12,7 +12,7 @@ from ..priors import Prior
 class Model(metaclass=abc.ABCMeta):
     """Base class for models with a log-likelihood function"""
 
-    def __init__(self, verbose=False, device='cpu'):
+    def __init__(self, verbose=False, device='cpu', **kwargs):
         """Initialize the model
         """
         self.verbose = verbose  # Indicate verbosity behavior
@@ -23,6 +23,8 @@ class Model(metaclass=abc.ABCMeta):
         self.dim = None         # Number of dimensions
         self.n_params = None    # Number of parameters
         self._observed = False  # Indicate if data is properly set
+        print('Model.__init__()', self)
+        super().__init__(**kwargs)
 
     def observe(self, events, end_time=None):
         """

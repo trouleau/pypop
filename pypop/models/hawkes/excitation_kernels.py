@@ -67,6 +67,9 @@ class ExponentialKernel(Excitation):
         """
         return self.decay * torch.exp(- self.decay * t) * (t >= 0)
 
+    def call_jit(self):
+        raise NotImplementedError()
+
     def callIntegral(self, t):
         """
         Integral of excitation function up to time `t`

@@ -91,11 +91,13 @@ class FitterSGD(Fitter):
     fit : Fit the model
     """
 
-    def __init__(self):
+    def __init__(self, **kwargs):
         self._n_iter_done = 0
         self.coeffs = None
         # self.loss = torch.tensor(np.inf)
         self.loss = np.inf
+        print('FitterSGD.__init__()', self)
+        super().__init__(**kwargs)
 
     def _init_penalty(self, penalty_name, penalty_link, elastic_net_ratio, penalty_C):
         # Set name of penalty
@@ -219,6 +221,7 @@ class FitterSGD(Fitter):
                            penalty_link=penalty_link,
                            elastic_net_ratio=elastic_net_ratio,
                            penalty_C=penalty_C)
+        print(self)
         # Set positive constraint attribute (used in `_take_gradient_step`)
         self.positive_constraint = positive_constraint
         # Reset optimizer & scheduler
