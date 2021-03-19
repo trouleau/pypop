@@ -47,13 +47,12 @@ class IrregQuantHawkesModel(Model):
         self.dim = None
         self.n_params = None
         self.n_var_params = None
-        self._fitted = False
+        self._observed = False
         self.verbose = verbose
         if torch.cuda.is_available() and device == 'cuda':
             self.device = 'cuda'
         else:
             self.device = 'cpu'
-        print('IrregQuantHawkesModel.__init__()', self)
         super().__init__(**kwargs)
 
     def set_data(self, times, counts):
@@ -75,9 +74,9 @@ class IrregQuantHawkesModel(Model):
         self.n_jumps = sum(map(sum, counts))
 
         # Init the pre-computed cache
-        if not self._fitted:
+        if not self._observed:
             self._init_cache()
-        self._fitted = True
+        self._observed = True
 
     def _init_cache_python(self):
         """
@@ -128,7 +127,7 @@ class IrregQuantHawkesModel(Model):
                    'kernel. Falling back to pure python implementation.'))
             self._init_cache_python()
 
-    # @enforce_observed
+    @enforce_observed
     def log_likelihood(self, mu, W):
         """
         Log likelihood of an irregularly quantized Hawkes process for the given
@@ -191,16 +190,37 @@ class IrregQuantHawkesModelMLE(IrregQuantHawkesModel, FitterSGD):
     Estimation fitter"""
 
     def __init__(self, *args, **kwargs):
-        print('IrregQuantHawkesModelMLE.__init__()', self)
         super().__init__(*args, **kwargs)
 
-    # @enforce_observed
+    @enforce_observed
     def mle_objective(self, coeffs):
         """Objectvie function for MLE: Averaged negative log-likelihood"""
         mu = self.coeffs[:self.dim]
         W = self.coeffs[self.dim:].reshape(self.dim, self.dim, self.excitation.M)
         return -1.0 * self.log_likelihood(mu, W) / self.n_jumps
 
+    @enforce_observed
+    def mle_objective_log_input(self, coeffs):
+        """Objectvie function for MLE: Averaged negative log-likelihood"""
+        log_mu = self.coeffs[:self.dim]
+        log_W = self.coeffs[self.dim:].reshape(self.dim, self.dim, self.excitation.M)
+        return -1.0 * self.log_likelihood(torch.exp(log_mu), torch.exp(log_W)) / self.n_jumps
+
     def fit(self, *args, **kwargs):
-        self._n_iter_done = 0
         return super().fit(objective_func=self.mle_objective, *args, **kwargs)
+
+    def fit_log_input(self, *args, **kwargs):
+        return super().fit(objective_func=self.mle_objective_log_input, *args, **kwargs)
+
+
+    def adjacency(self, exp_link=False):
+        W = self.coeffs[self.dim:].reshape(self.dim, self.dim, self.excitation.M).detach()
+        if exp_link:
+            W = torch.exp(W)
+        return W
+
+    def baseline(self, exp_link=False):
+        mu = self.coeffs[:self.dim].detach()
+        if exp_link:
+            mu = torch.exp(mu)
+        return mu

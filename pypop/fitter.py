@@ -5,6 +5,10 @@ import abc
 from .utils.decorators import enforce_observed
 
 
+def identitiy_link(x):
+    return x
+
+
 class Fitter(metaclass=abc.ABCMeta):
     """
     Abstract fitter object for fitting algorithms with a `fit` function
@@ -91,21 +95,23 @@ class FitterSGD(Fitter):
     fit : Fit the model
     """
 
+    _allowed_penalties = ['l1', 'l2', 'elasticnet', 'none']
+
     def __init__(self, **kwargs):
         self._n_iter_done = 0
         self.coeffs = None
-        # self.loss = torch.tensor(np.inf)
         self.loss = np.inf
-        print('FitterSGD.__init__()', self)
+        self.elastic_net_ratio = None
+        self.penalty_link = identitiy_link
+        self.penalty_C = None
         super().__init__(**kwargs)
 
     def _init_penalty(self, penalty_name, penalty_link, elastic_net_ratio, penalty_C):
         # Set name of penalty
         self.penalty_name = penalty_name
         # Check penalty link type
-        if penalty_link is None:
-            penalty_link = lambda x: x
-        self.penalty_link = penalty_link
+        if penalty_link is not None:
+            self.penalty_link = penalty_link
         # Set config
         if self.penalty_name == 'elasticnet':
             self.elastic_net_ratio = elastic_net_ratio
@@ -119,6 +125,8 @@ class FitterSGD(Fitter):
         elif self.penalty_name == 'none':
             self.elastic_net_ratio = 1.0
             self.penalty_C = np.inf
+        else:
+            raise ValueError(f'Invalid penalty name, must be: {self._allowed_penalties}')
 
     @property
     def strength_ridge(self):
@@ -221,7 +229,6 @@ class FitterSGD(Fitter):
                            penalty_link=penalty_link,
                            elastic_net_ratio=elastic_net_ratio,
                            penalty_C=penalty_C)
-        print(self)
         # Set positive constraint attribute (used in `_take_gradient_step`)
         self.positive_constraint = positive_constraint
         # Reset optimizer & scheduler
