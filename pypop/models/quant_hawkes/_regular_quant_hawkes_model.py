@@ -160,10 +160,14 @@ def _update_a(net_edge_pr_ratio, w_pos_s_pr, w_pos_r_pr, w_neg_s_pr, w_neg_r_pr,
     p_ratio = (
         net_edge_pr_ratio
         * (w_pos_r_pr ** w_pos_s_pr) / gamma(w_pos_s_pr)
-        * gamma(w_pos_s_po) / (w_pos_r_po ** w_pos_s_po)
+        * np.clip(gamma(w_pos_s_po) / np.clip(w_pos_r_po ** w_pos_s_po, 0.0, 1e4), 0.0, 1e4)
         * gamma(w_neg_s_pr) / (w_neg_r_pr ** w_neg_s_pr)
-        * (w_neg_r_po ** w_neg_s_po) / gamma(w_neg_s_po)
+        * np.clip((w_neg_r_po ** w_neg_s_po) / np.clip(gamma(w_neg_s_po), 0.0, 1e4), 0.0, 1e4)
     )
+    print('gamma(w_pos_s_po) / np.clip(w_pos_r_po ** w_pos_s_po, 0.0, 1e4) =')
+    print(np.clip(gamma(w_pos_s_po) / np.clip(w_pos_r_po ** w_pos_s_po, 0.0, 1e4), 0.0, 1e4))
+    print('(w_neg_r_po ** w_neg_s_po) / np.clip(gamma(w_neg_s_po), 0.0, 1e4) =')
+    print(np.clip((w_neg_r_po ** w_neg_s_po) / np.clip(gamma(w_neg_s_po), 0.0, 1e4), 0.0, 1e4))
     a_po = p_ratio / (p_ratio + 1)
     return a_po
 

@@ -98,7 +98,7 @@ class LearnerCallback(BaseCallback):
         # Init previous variables for differential computation
         self.last_time = time.time()
         self.last_iter = 0
-        self.last_coeffs = x0.numpy() if isinstance(x0, torch.Tensor) else x0
+        self.last_coeffs = x0.detach().numpy() if isinstance(x0, torch.Tensor) else x0
         self.last_loss = float("Inf")
 
     def __call__(self, learner_obj, end=None, force=False):
