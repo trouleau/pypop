@@ -210,8 +210,8 @@ class IrregQuantHawkesModelMLE(IrregQuantHawkesModel, FitterSGD):
         return super().fit(objective_func=self.mle_objective, *args, **kwargs)
 
     def fit_log_input(self, *args, **kwargs):
+        """Fit log-likelihood with log-input variables"""
         return super().fit(objective_func=self.mle_objective_log_input, *args, **kwargs)
-
 
     def adjacency(self, exp_link=False):
         W = self.coeffs[self.dim:].reshape(self.dim, self.dim, self.excitation.M).detach()

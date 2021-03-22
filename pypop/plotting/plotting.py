@@ -1,4 +1,5 @@
-import matplotlib
+import copy
+import matplotlib as mpl
 from matplotlib.backends.backend_pgf import FigureCanvasPgf
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib.pyplot as plt
@@ -98,14 +99,14 @@ ICML_RCPARAMS = {
 }
 
 def set_notebook_config():
-    matplotlib.backend_bases.register_backend('pdf', FigureCanvasPgf)
-    matplotlib.rcParams.update(SIGCONF_RCPARAMS)
+    mpl.backend_bases.register_backend('pdf', FigureCanvasPgf)
+    mpl.rcParams.update(SIGCONF_RCPARAMS)
     np.set_printoptions(edgeitems=10, linewidth=1000)
 
 
 def set_icml_config():
-    matplotlib.backend_bases.register_backend('pdf', FigureCanvasPgf)
-    matplotlib.rcParams.update(ICML_RCPARAMS)
+    mpl.backend_bases.register_backend('pdf', FigureCanvasPgf)
+    mpl.rcParams.update(ICML_RCPARAMS)
     np.set_printoptions(edgeitems=10, linewidth=1000)
 
 
@@ -249,7 +250,7 @@ def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.
     vmin = min(map(lambda A: A.min(), mats)) if vmin is None else vmin
     vmax = max(map(lambda A: A.max(), mats)) if vmax is None else vmax
     norm = colors.Normalize(vmin=vmin, vmax=vmax)
-    cmap = 'plasma'
+    cmap = copy.copy(mpl.cm.get_cmap("plasma"))
 
     for ax, M, label in zip(axs, mats, labels):
         plt.sca(ax)
@@ -274,5 +275,5 @@ def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right", size="5%", pad=0.1)
         plt.colorbar(p, cax=cax, extend=extend)
-
+    plt.show()
     return fig
