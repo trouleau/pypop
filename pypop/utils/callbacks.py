@@ -53,6 +53,7 @@ class BaseCallback:
     def __call__(self, learner_obj, end=None, force=False):
         raise NotImplementedError("Must be implemented in child class")
 
+
 class LearnerCallback(BaseCallback):
 
     def __init__(self, x0, print_every=10, coeffs_true=None, acc_thresh=None,

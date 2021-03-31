@@ -55,7 +55,7 @@ class IrregQuantHawkesModel(Model):
             self.device = 'cpu'
         super().__init__(**kwargs)
 
-    def set_data(self, times, counts):
+    def observe(self, times, counts):
         """
         Set the data for the model
         """

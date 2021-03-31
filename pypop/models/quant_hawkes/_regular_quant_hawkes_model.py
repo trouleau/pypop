@@ -44,6 +44,12 @@ class RegularlyQuantizedHawkesModel:
     def observe(self, delta, counts):
         """
         Set the data for the model
+
+        Arguments:
+        ---------
+        delta : float
+            Time delta between two bins
+        counts : array-like, shape: #dimensions x #bins
         """
         assert isinstance(counts[0], np.ndarray)
 
@@ -58,9 +64,9 @@ class RegularlyQuantizedHawkesModel:
         self.n_bins = self.counts.shape[1]
 
         if self.p >= self.n_bins:
-            raise RuntimeError("Number should be larger than `p`.")
+            raise RuntimeError("Number of bins should be larger than `p`.")
 
-        self._fitted = True
+        self._observed = True
 
     def log_likelihood(self, coeffs):
         raise NotImplementedError((

@@ -1,3 +1,4 @@
+import numba
 import torch
 import numpy as np
 import math
@@ -68,7 +69,11 @@ class ExponentialKernel(Excitation):
         return self.decay * torch.exp(- self.decay * t) * (t >= 0)
 
     def call_jit(self):
-        raise NotImplementedError()
+        decay = float(self.decay)
+        @numba.jit(nopython=True, fastmath=True)
+        def func(t):
+            return decay * np.exp(-decay * t) * (t >= 0)
+        return func
 
     def callIntegral(self, t):
         """
