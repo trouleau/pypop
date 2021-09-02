@@ -80,7 +80,9 @@ setup(
         "numba>=0.47.0",
         "pandas==0.25.3",
         "matplotlib>=3.1.2",
-        "Cython>=0.29.2"
+        "Cython>=0.29.2",
+        "scikit-learn>=0.24.2",
+        "tick>=0.5.0"
     ],
 
     ext_modules = cythonize("pypop/models/hawkes/_cumulant_computer/cumulant_computer.pyx"),

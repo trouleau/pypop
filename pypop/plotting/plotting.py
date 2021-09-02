@@ -208,7 +208,7 @@ def make_plot_df(df, suf_col_dict, agg_col, threshold=THRESHOLD):
         return df_plot
 
 
-def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.95), grid=None, ticks=None, ytitle=None):
+def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.95), cmap_name="plasma", grid=None, ticks=None, ytitle=None, titlesize=None):
     if labels is None:
         assert isinstance(mats, dict)
         labels = list(mats.keys())
@@ -250,7 +250,7 @@ def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.
     vmin = min(map(lambda A: A.min(), mats)) if vmin is None else vmin
     vmax = max(map(lambda A: A.max(), mats)) if vmax is None else vmax
     norm = colors.Normalize(vmin=vmin, vmax=vmax)
-    cmap = copy.copy(mpl.cm.get_cmap("plasma"))
+    cmap = copy.copy(mpl.cm.get_cmap(cmap_name))
 
     for ax, M, label in zip(axs, mats, labels):
         plt.sca(ax)
@@ -266,7 +266,7 @@ def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.
                 plt.yticks(ticks)
             p.cmap.set_over('white')
             p.cmap.set_under('black')
-            plt.title(label, pad=10, y=ytitle)
+            plt.title(label, pad=10, y=ytitle, )
         else:
             plt.axis('off')
 
@@ -277,3 +277,87 @@ def plotmat_sidebyside(mats, labels=None, vmin=None, vmax=None, figsize=(5.5, 1.
         plt.colorbar(p, cax=cax, extend=extend)
     plt.show()
     return fig
+
+
+def print_report(name, adj_hat, adj_true, thresh=0.05):
+    adj_hat_flat = adj_hat.flatten()
+    adj_true_flat = adj_true.flatten()
+
+    # Relative error
+    relerr = metrics.relerr(adj_hat_flat, adj_true_flat)
+
+    # Accuracy
+    acc = metrics.accuracy(adj_hat_flat, adj_true_flat, threshold=thresh)
+    # Precimetrics
+    prec = metrics.precision(adj_hat_flat, adj_true_flat, threshold=thresh)
+    rec = metrics.recall(adj_hat_flat, adj_true_flat, threshold=thresh)
+    fsc = metrics.fscore(adj_hat_flat, adj_true_flat, threshold=thresh)
+    precat5 = metrics.precision_at_n(adj_hat_flat, adj_true_flat, n=5)
+    precat10 = metrics.precision_at_n(adj_hat_flat, adj_true_flat, n=10)
+    precat20 = metrics.precision_at_n(adj_hat_flat, adj_true_flat, n=20)
+    precat50 = metrics.precision_at_n(adj_hat_flat, adj_true_flat, n=50)
+    precat100 = metrics.precision_at_n(adj_hat_flat, adj_true_flat, n=100)
+    precat200 = metrics.precision_at_n(adj_hat_flat, adj_true_flat, n=200)
+    # Error counts
+    tp = metrics.tp(adj_hat_flat, adj_true_flat, threshold=thresh)
+    fp = metrics.fp(adj_hat_flat, adj_true_flat, threshold=thresh)
+    tn = metrics.tn(adj_hat_flat, adj_true_flat, threshold=thresh)
+    fn = metrics.fn(adj_hat_flat, adj_true_flat, threshold=thresh)
+    # Error rates
+    tpr = metrics.tpr(adj_hat_flat, adj_true_flat, threshold=thresh)
+    fpr = metrics.fpr(adj_hat_flat, adj_true_flat, threshold=thresh)
+    tnr = metrics.tnr(adj_hat_flat, adj_true_flat, threshold=thresh)
+    fnr = metrics.fnr(adj_hat_flat, adj_true_flat, threshold=thresh)
+
+    import sklearn.metrics
+    def roc_auc_score(adj_test, adj_true):
+        return sklearn.metrics.roc_auc_score(np.ravel(adj_true) > 0, np.ravel(adj_test))
+    def pr_auc_score(adj_test, adj_true):
+        return sklearn.metrics.average_precision_score(np.ravel(adj_true) > 0, np.ravel(adj_test))
+    pr_auc = pr_auc_score(adj_hat_flat, adj_true_flat)
+    roc_auc = roc_auc_score(adj_hat_flat, adj_true_flat)
+
+    print()
+    print(f'========== Method: {name} ==========')
+    print()
+    print(f"Relative Error: {relerr:.2e} ({relerr:.2f})")
+    print(f" PR-AUC: {pr_auc:.2f}")
+    print(f"ROC-AUC: {roc_auc:.2f}")
+    print()
+    print(f"Accuracy: {acc:.2f}")
+    print()
+    print('Edge counts')
+    print('------------')
+    print(f"Pred: {np.sum(adj_hat_flat > thresh):.2f}")
+    print(f"True: {np.sum(adj_true_flat > 0):.2f}")
+    print()
+    print('Error counts')
+    print('------------')
+    print(f" True Positive: {tp:.2f}")
+    print(f"False Positive: {fp:.2f}")
+    print(f" True Negative: {tn:.2f}")
+    print(f"False Negative: {fn:.2f}")
+    print()
+    print('Error rates')
+    print('-----------')
+    print(f" True Positive Rate: {tpr:.2f}")
+    print(f"False Positive Rate: {fpr:.2f}")
+    print(f" True Negative Rate: {tnr:.2f}")
+    print(f"False Negative Rate: {fnr:.2f}")
+    print()
+    print('F-Score')
+    print('-------')
+    print(f" F1-Score: {fsc:.2f}")
+    print(f"Precision: {prec:.2f}")
+    print(f"   Recall: {rec:.2f}")
+    print(f"   PR-AUC: {pr_auc:.2f}")
+    print(f"  ROC-AUC: {roc_auc:.2f}")
+    print()
+    print('Precision@k')
+    print('-----------')
+    # print(f"  Prec@5: {precat5:.2f}")
+    print(f" Prec@10: {precat10:.2f}")
+    # print(f" Prec@20: {precat20:.2f}")
+    print(f" Prec@50: {precat50:.2f}")
+    # print(f"Prec@100: {precat100:.2f}")
+    print(f"Prec@200: {precat200:.2f}")

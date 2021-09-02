@@ -41,7 +41,7 @@ class Excitation:
 
 class ExponentialKernel(Excitation):
 
-    def __init__(self, decay, cut_off):
+    def __init__(self, decay, cut_off=float("inf")):
         """
         Exponential kernel
         k(t) = decay x exp(-decay * t)

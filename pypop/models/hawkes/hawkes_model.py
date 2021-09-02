@@ -16,6 +16,10 @@ class HawkesModel(Model):
             Prior object
         excitation: excitation
             Excitation object
+        verbose : bool (optional, default: False)
+            If set to True, print logs
+        device : str (optional, default: 'cpu')
+            Device for `torch` tensors
         """
         super().__init__(verbose=verbose, device=device)
         self.excitation = excitation

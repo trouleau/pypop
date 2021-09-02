@@ -59,7 +59,8 @@ class ModelBlackBoxVariational(Model):
     """
 
     def __init__(self, posterior, prior, C, n_samples, n_weights=1,
-                 weight_temp=1, verbose=False, device='cpu', prior_kwargs={}):
+                 weight_temp=1, verbose=False, device='cpu', prior_kwargs={},
+                 model_kwargs={}):
         """
         Initialize the model
 
@@ -70,7 +71,7 @@ class ModelBlackBoxVariational(Model):
         prior : Prior
             Prior object
         C : float or torch.tensor
-            Prior weight (i.e., scale for `GaussianPrior`)
+            Initial prior weight (i.e., scale for `GaussianPrior`)
         n_samples : int
             Number of samples used fort he Monte Carlo estimate of expectations
         n_weights : int (optional, default: 1)
@@ -82,7 +83,7 @@ class ModelBlackBoxVariational(Model):
         device : str (optional, default: 'cpu')
             Device for `torch` tensors
         """
-        super().__init__(verbose=verbose, device=device)
+        super().__init__(verbose=verbose, device=device, **model_kwargs)
         self.posterior = posterior()             # Coeffs posterior
         self.prior = prior(C=C, **prior_kwargs)  # Coeffs prior
         self.n_samples = n_samples               # Number of samples for BBVI

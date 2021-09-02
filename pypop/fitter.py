@@ -289,9 +289,9 @@ class FitterVariationalEM(Fitter):
                                        momentum=self.mstep_momentum)
 
     @enforce_observed
-    def fit(self, *, objective_func, x0, optimizer, lr, lr_sched, tol, max_iter,
-            mstep_interval=100, mstep_offset=0, mstep_momentum=0.5, seed=None,
-            callback=None):
+    def fit(self, *, objective_func, x0=None, optimizer=torch.optim.Adam, lr=0.1,
+            lr_sched=0.999, tol=1e-6, max_iter=10000, mstep_interval=100,
+            mstep_offset=0, mstep_momentum=0.5, seed=None, callback=None):
         """
         Fit the model.
 
@@ -333,7 +333,10 @@ class FitterVariationalEM(Fitter):
             torch.manual_seed(seed)
         # Set callable if None
         if callback is None:
-            def callback(arg): pass
+            def callback(*args, **kwargs): pass
+        # Set initial estimate if None
+        if x0 is None:
+            x0 = 0.1 * torch.ones(self.n_var_params)
         # Set alias for objective function
         self._objective_func = objective_func
         # Set the attributes for the E and M steps
